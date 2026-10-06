@@ -1336,12 +1336,14 @@
 
     fetchJson('/_data/forums.json', function (err, data) {
       if (err || !data) {
+        // On failure, hide loading state and show empty state so the page doesn't look broken
         var list = document.getElementById('sr-forum-list');
         if (list) list.innerHTML = '';
         var empty = document.getElementById('sr-forum-empty');
         if (empty) empty.style.display = 'block';
         return;
       }
+      // Handle both shapes: a bare array (older format) OR {"forums": [...]} (what Decap writes)
       var forums = Array.isArray(data) ? data : (data.forums || []);
       renderForums(forums);
     });
