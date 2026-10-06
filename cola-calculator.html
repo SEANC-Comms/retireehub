@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The COLA Calculator | SEANC</title>
+<meta name="description" content="See exactly what a cost-of-living adjustment would mean for your pension — and how that compares to receiving the same percentage as a one-time bonus.">
+<meta property="og:title" content="The COLA Calculator | SEANC">
+<meta property="og:description" content="Plug in your pension and a COLA percentage. See what it's worth — and what the legislature is choosing not to give you.">
+<meta property="og:image" content="https://www.seanc.org/assets/SEANC_Logo_Blue_RGB.png">
+<meta name="theme-color" content="#005EB8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --seanc-blue: #005EB8;
+  --seanc-blue-dark: #004a93;
+  --seanc-blue-deep: #003366;
+  --seanc-light-blue: #a7d5f2;
+  --seanc-pale-blue: #e6f0fa;
+  --seanc-gold: #ffc107;
+  --seanc-teal: #00a499;
+  --seanc-red: #e63946;
+  --seanc-gray: #d9d9d9;
+  --seanc-gray-dark: #4a4a4a;
+  --seanc-charcoal: #1a1a1a;
+  --paper: #fafafa;
+  --paper-warm: #f5f1e8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--seanc-charcoal);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ============ HEADER ============ */
+.site-header {
+  background: var(--seanc-blue);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--seanc-gold);
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-header img { height: 50px; }
+.site-header .tagline {
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+.breadcrumb {
+  background: var(--seanc-blue-dark);
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.breadcrumb a { color: var(--seanc-light-blue); text-decoration: none; }
+.breadcrumb a:hover { color: var(--seanc-gold); text-decoration: underline; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ============ HERO ============ */
+.hero {
+  background: linear-gradient(135deg, var(--seanc-blue-deep) 0%, var(--seanc-blue) 100%);
+  color: white;
+  padding: 4rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,193,7,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(167,213,242,0.10) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container-narrow { position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero h1 .accent {
+  color: var(--seanc-gold);
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-lede {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  max-width: 640px;
+}
+
+/* ============ CALCULATOR ============ */
+.calc-section {
+  background: var(--paper);
+  padding: 3rem 0 5rem;
+  position: relative;
+  margin-top: -3rem;
+}
+.calc-wrap {
+  background: white;
+  border: 1px solid var(--seanc-gray);
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 51, 102, 0.10);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.calc-header {
+  background: var(--paper-warm);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--seanc-gray);
+}
+.calc-header .eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.4rem;
+}
+.calc-header h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  line-height: 1.2;
+}
+
+.calc-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0;
+  min-height: 500px;
+}
+@media (max-width: 800px) { .calc-body { grid-template-columns: 1fr; } }
+
+.calc-inputs {
+  padding: 2.5rem 2rem;
+  background: var(--paper);
+  border-right: 1px solid var(--seanc-gray);
+}
+@media (max-width: 800px) {
+  .calc-inputs { border-right: none; border-bottom: 1px solid var(--seanc-gray); }
+}
+
+.input-block {
+  margin-bottom: 2.2rem;
+}
+.input-block:last-child { margin-bottom: 0; }
+
+.input-block label {
+  display: block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 0.6rem;
+}
+
+.input-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  font-family: 'Roboto Slab', serif;
+}
+.input-display .prefix {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--seanc-gray-dark);
+}
+.input-display .value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+}
+.input-display .suffix {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--seanc-gray-dark);
+  margin-left: 0.2rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--seanc-pale-blue);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--seanc-blue);
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0,94,184,0.3);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--seanc-blue);
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0,94,184,0.3);
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--seanc-gray-dark);
+}
+
+/* Year selector buttons */
+.year-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+.year-btn {
+  padding: 0.7rem 0.4rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: white;
+  border: 2px solid var(--seanc-gray);
+  border-radius: 4px;
+  color: var(--seanc-blue-deep);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.year-btn:hover {
+  border-color: var(--seanc-blue);
+}
+.year-btn.active {
+  background: var(--seanc-blue);
+  border-color: var(--seanc-blue);
+  color: white;
+}
+
+/* ============ RESULTS ============ */
+.calc-results {
+  padding: 2.5rem 2rem;
+  background: white;
+}
+
+.result-headline {
+  background: var(--seanc-blue-deep);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.result-headline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--seanc-gold);
+}
+.result-headline .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-gold);
+  margin-bottom: 0.5rem;
+}
+.result-headline .value {
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.result-headline .desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* COLA vs Bonus comparison */
+.compare-block {
+  background: var(--paper);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.compare-block-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 1rem;
+}
+.compare-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.compare-bar {
+  position: relative;
+}
+.compare-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+.compare-bar-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--seanc-charcoal);
+}
+.compare-bar-value {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+}
+.compare-bar.bonus .compare-bar-value { color: #c47a00; }
+.compare-bar.cola .compare-bar-value { color: var(--seanc-teal); }
+
+.bar-track {
+  background: var(--seanc-gray);
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.compare-bar.bonus .bar-fill {
+  background: linear-gradient(90deg, #ffc107 0%, #c47a00 100%);
+}
+.compare-bar.cola .bar-fill {
+  background: linear-gradient(90deg, #00a499 0%, #007873 100%);
+}
+.compare-bar-desc {
+  font-size: 0.8rem;
+  color: var(--seanc-gray-dark);
+  margin-top: 0.3rem;
+}
+
+.multiplier-callout {
+  background: linear-gradient(135deg, var(--seanc-gold) 0%, #e0a800 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.multiplier-callout .x-mark {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+}
+.multiplier-callout .desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--seanc-blue-deep);
+  line-height: 1.4;
+}
+.multiplier-callout .desc strong { font-weight: 700; }
+
+/* System cost mini-callout */
+.system-cost {
+  background: var(--paper-warm);
+  border-left: 4px solid var(--seanc-blue);
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+  line-height: 1.5;
+}
+.system-cost strong {
+  font-family: 'Roboto Slab', serif;
+  color: var(--seanc-blue-deep);
+  font-size: 1.05rem;
+  display: inline-block;
+}
+
+/* ============ EXPLAINER NOTES ============ */
+.notes-section {
+  background: white;
+  padding: 4rem 0;
+  border-top: 1px solid var(--seanc-gray);
+}
+.section-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--seanc-gold);
+}
+.section-heading {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 2rem;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.note-card {
+  padding: 1.5rem;
+  background: var(--paper);
+  border-radius: 4px;
+  border-top: 4px solid var(--seanc-blue);
+}
+.note-card.warn { border-top-color: var(--seanc-gold); }
+.note-card.imp { border-top-color: var(--seanc-teal); }
+.note-card h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.7rem;
+  line-height: 1.2;
+}
+.note-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--seanc-gray-dark);
+}
+.note-card p strong { color: var(--seanc-charcoal); }
+
+/* ============ KEEP READING ============ */
+.next-section {
+  background: var(--paper-warm);
+  padding: 5rem 0;
+}
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.next-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--seanc-gray);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.next-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,94,184,0.10);
+}
+.next-card .card-mark {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.8rem;
+}
+.next-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+.next-card p {
+  font-size: 0.95rem;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+.next-card .card-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.next-card .card-link::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.next-card:hover .card-link::after { transform: translateX(4px); }
+
+/* ============ CTA ============ */
+.cta-section {
+  background: var(--seanc-blue);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.cta-section p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  border-color: var(--seanc-gold);
+}
+.btn-primary:hover { background: white; border-color: white; }
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+.btn-secondary:hover { background: white; color: var(--seanc-blue); }
+
+/* ============ FOOTER ============ */
+.site-footer {
+  background: var(--seanc-charcoal);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 2rem;
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.site-footer h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-bottom: 1rem;
+}
+.site-footer a { color: var(--seanc-light-blue); text-decoration: none; }
+.site-footer a:hover { color: var(--seanc-gold); text-decoration: underline; }
+.site-footer ul { list-style: none; }
+.site-footer ul li { margin-bottom: 0.4rem; }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.footer-tagline {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  color: var(--seanc-gold);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="https://www.seanc.org"><img src="https://retirees.seanc.org/seanc-logo-white.png" alt="State Employees Association of North Carolina"></a>
+    <span class="tagline">Your Voice. Our Mission.</span>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://www.seanc.org">SEANC</a> / <a href="https://retirees.seanc.org/">Retiree Resources</a> / <a href="why-no-cola.html">Why No COLA?</a> / The COLA Calculator
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container-narrow">
+    <div class="hero-eyebrow">An Interactive Tool</div>
+    <h1>
+      The COLA calculator.
+      <span class="accent">See what's really at stake.</span>
+    </h1>
+    <p class="hero-lede">
+      Move the sliders below. See what a permanent cost-of-living adjustment would mean for your monthly pension, what it's worth over the long run, and how it compares to receiving the same percentage as a one-time bonus.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="calc-section">
+  <div class="container">
+    <div class="calc-wrap">
+      <div class="calc-header">
+        <div class="eyebrow">Personalized projection</div>
+        <h2>Your pension, with a permanent COLA.</h2>
+      </div>
+
+      <div class="calc-body">
+
+        <!-- INPUTS -->
+        <div class="calc-inputs">
+
+          <div class="input-block">
+            <label for="pension-input">Your current monthly pension</label>
+            <div class="input-display">
+              <span class="prefix">$</span>
+              <span class="value" id="pension-display">2,500</span>
+            </div>
+            <input type="range" id="pension-input" min="500" max="6000" step="50" value="2500" aria-label="Current monthly pension amount in dollars">
+            <div class="range-labels">
+              <span>$500</span>
+              <span>$6,000</span>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label for="cola-input">Hypothetical COLA percentage</label>
+            <div class="input-display">
+              <span class="value" id="cola-display">2.0</span>
+              <span class="suffix">%</span>
+            </div>
+            <input type="range" id="cola-input" min="0.5" max="5" step="0.25" value="2.0" aria-label="Hypothetical COLA percentage">
+            <div class="range-labels">
+              <span>0.5%</span>
+              <span>5%</span>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label>Project over how many years</label>
+            <div class="year-buttons" role="group" aria-label="Projection period in years">
+              <button type="button" class="year-btn" data-years="5">5 yrs</button>
+              <button type="button" class="year-btn active" data-years="10">10 yrs</button>
+              <button type="button" class="year-btn" data-years="15">15 yrs</button>
+              <button type="button" class="year-btn" data-years="20">20 yrs</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc-results">
+
+          <div class="result-headline">
+            <div class="label">Your monthly check increases by</div>
+            <div class="value">$<span id="monthly-bump">50.00</span></div>
+            <div class="desc">Every month, for the rest of your life</div>
+          </div>
+
+          <div class="compare-block">
+            <div class="compare-block-title">Over <span id="year-label">10</span> years: COLA vs. one-time bonus</div>
+            <div class="compare-bars">
+              <div class="compare-bar bonus">
+                <div class="compare-bar-header">
+                  <span class="compare-bar-label">If it's a one-time bonus</span>
+                  <span class="compare-bar-value">$<span id="bonus-value">600</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" id="bonus-bar" style="width: 5%;"></div>
+                </div>
+                <div class="compare-bar-desc">A single check, then it's gone</div>
+              </div>
+              <div class="compare-bar cola">
+                <div class="compare-bar-header">
+                  <span class="compare-bar-label">If it's a permanent COLA</span>
+                  <span class="compare-bar-value">$<span id="cola-value">6,000</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" id="cola-bar" style="width: 100%;"></div>
+                </div>
+                <div class="compare-bar-desc">Compounds every year, paid for life</div>
+              </div>
+            </div>
+
+            <div class="multiplier-callout">
+              <div class="x-mark"><span id="multiplier">10</span>×</div>
+              <div class="desc">
+                <strong>A permanent COLA at this level is worth roughly <span id="multiplier-text">10 times</span> more than the same percentage delivered as a one-time bonus</strong> — over the projection period you chose.
+              </div>
+            </div>
+          </div>
+
+          <div class="system-cost">
+            <strong>What this would cost the system:</strong> A <span id="cola-pct-cost">2.0</span>% COLA for all TSERS retirees would cost the state approximately <strong>$<span id="system-cost">1.17B</span></strong> (recurring, annually). That's based on the official $586.7M estimate for a 1% COLA from the December 2024 TSERS actuarial valuation, scaled linearly. It's a significant figure — and a fraction of one percent of the state budget.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTES ============ -->
+<section class="notes-section">
+  <div class="container-narrow">
+    <div class="section-eyebrow">A few notes on the math</div>
+    <h2 class="section-heading">How this calculator works.</h2>
+    <div class="notes-grid">
+      <div class="note-card">
+        <h4>The projection is conservative.</h4>
+        <p>The cumulative COLA figure assumes <strong>no further COLAs</strong> over the projection period. In reality, future COLAs would compound on top of the first one, making the gap with a one-time bonus even larger.</p>
+      </div>
+      <div class="note-card warn">
+        <h4>The bonus comparison is generous.</h4>
+        <p>The "one-time bonus" figure here is calculated as the same percentage applied to your annual pension — the most favorable possible interpretation. Real-world bonuses have sometimes been smaller than this.</p>
+      </div>
+      <div class="note-card imp">
+        <h4>The system cost scales linearly.</h4>
+        <p>The official 2024 actuarial valuation puts a 1% COLA at <strong>$586.7M</strong> recurring. This tool scales that figure proportionally. The actuaries' exact estimate for higher percentages may vary slightly.</p>
+      </div>
+      <div class="note-card">
+        <h4>Inflation isn't included.</h4>
+        <p>The projection shows nominal dollars, not inflation-adjusted ones. In real purchasing-power terms, a COLA that simply matches inflation isn't an increase — it's just <strong>not falling further behind.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEEP READING ============ -->
+<section class="next-section">
+  <div class="container">
+    <div class="section-eyebrow">Keep reading</div>
+    <h2 class="section-heading">The full case.</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="card-mark">Start Here</div>
+        <h3>Why No COLA? The Real Story.</h3>
+        <p>The structural explanation: the three-legged stool of your pension, what's gone wrong with each leg, and who's responsible.</p>
+        <a href="why-no-cola.html" class="card-link">Read the explainer</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">The Evidence</div>
+        <h3>45 Years of COLAs</h3>
+        <p>Every retiree raise from 1981 to 2026 in a single chart. The pattern speaks for itself — and the 2009 break is impossible to miss.</p>
+        <a href="cola-timeline.html" class="card-link">See the chart</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">Your Loss</div>
+        <h3>How Much Has Your Pension Lost?</h3>
+        <p>This calculator shows what a real COLA would put back. The buying-power tool shows what's already been taken — year by year, in real dollars.</p>
+        <a href="cola-buying-power.html" class="card-link">See your loss</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Take these numbers to Raleigh.</h2>
+    <p>You now know what a real COLA would be worth — to you, and to the legislature's budget. Make them hear it.</p>
+    <div class="cta-buttons">
+      <a href="https://action.seanc.org/" class="btn btn-primary">Contact Your Legislators</a>
+      <a href="https://retirees.seanc.org/" class="btn btn-secondary">Back to Retiree Resources</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Contact SEANC</h4>
+        <p><strong style="color:white;">State Employees Association of North Carolina</strong></p>
+        <p>1621 Midtown Place<br>Raleigh, NC 27609</p>
+        <p style="margin-top:1rem;">Member Hotline: <a href="tel:18887326242">888-732-6242</a></p>
+        <p>Main Office: <a href="tel:18002222758">800-222-2758</a></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.seanc.org">SEANC.org Home</a></li>
+          <li><a href="https://retirees.seanc.org/">Retiree Resources</a></li>
+          <li><a href="why-no-cola.html">Why No COLA? The Real Story</a></li>
+          <li><a href="cola-timeline.html">45 Years of COLAs</a></li>
+          <li><a href="cola-buying-power.html">How Much Has Your Pension Lost?</a></li>
+          <li><a href="https://action.seanc.org/">Contact Your Legislators</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-tagline">Your Voice. Our Mission. Empowering Change.</div>
+      <div>© 2026 State Employees Association of North Carolina. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ES5 JavaScript with data-cfasync="false" for Cloudflare compatibility -->
+<script data-cfasync="false">
+(function() {
+  // State
+  var state = {
+    pension: 2500,
+    cola: 2.0,
+    years: 10
+  };
+
+  // DOM elements
+  var pensionInput = document.getElementById('pension-input');
+  var pensionDisplay = document.getElementById('pension-display');
+  var colaInput = document.getElementById('cola-input');
+  var colaDisplay = document.getElementById('cola-display');
+  var yearButtons = document.querySelectorAll('.year-btn');
+
+  // Output elements
+  var monthlyBumpEl = document.getElementById('monthly-bump');
+  var yearLabelEl = document.getElementById('year-label');
+  var bonusValueEl = document.getElementById('bonus-value');
+  var colaValueEl = document.getElementById('cola-value');
+  var bonusBarEl = document.getElementById('bonus-bar');
+  var colaBarEl = document.getElementById('cola-bar');
+  var multiplierEl = document.getElementById('multiplier');
+  var multiplierTextEl = document.getElementById('multiplier-text');
+  var colaPctCostEl = document.getElementById('cola-pct-cost');
+  var systemCostEl = document.getElementById('system-cost');
+
+  // Format numbers with commas
+  function fmt(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function fmtMoney(n) {
+    if (n >= 1000) {
+      return fmt(Math.round(n));
+    }
+    return n.toFixed(2);
+  }
+
+  function fmtBig(n) {
+    // Format very large numbers as e.g. $1.17B or $587M
+    if (n >= 1000000000) {
+      return (n / 1000000000).toFixed(2) + 'B';
+    }
+    if (n >= 1000000) {
+      return Math.round(n / 1000000) + 'M';
+    }
+    return fmt(Math.round(n));
+  }
+
+  function recalc() {
+    var monthlyBump = state.pension * (state.cola / 100);
+    var annualBump = monthlyBump * 12;
+    var cumulativeCola = annualBump * state.years;
+    var bonusAmount = state.pension * 12 * (state.cola / 100); // one-time bonus = % of annual
+    var multiplier = state.years; // cumulative permanent / one-time bonus = years
+    var systemCost = 586700000 * state.cola; // $586.7M per 1%
+
+    // Update displays
+    monthlyBumpEl.textContent = fmtMoney(monthlyBump);
+    yearLabelEl.textContent = state.years;
+    bonusValueEl.textContent = fmt(Math.round(bonusAmount));
+    colaValueEl.textContent = fmt(Math.round(cumulativeCola));
+
+    // Bar widths — bonus stays the reference for COLA at 1 year-equivalent
+    // We show COLA at 100% and bonus as a proportion (1/years)
+    var bonusPct = (100 / multiplier);
+    bonusBarEl.style.width = bonusPct + '%';
+    colaBarEl.style.width = '100%';
+
+    multiplierEl.textContent = multiplier;
+    multiplierTextEl.textContent = multiplier + ' times';
+
+    colaPctCostEl.textContent = state.cola.toFixed(state.cola % 1 === 0 ? 1 : 1);
+    systemCostEl.textContent = fmtBig(systemCost);
+  }
+
+  // Event handlers
+  pensionInput.addEventListener('input', function(e) {
+    state.pension = parseInt(e.target.value, 10);
+    pensionDisplay.textContent = fmt(state.pension);
+    recalc();
+  });
+
+  colaInput.addEventListener('input', function(e) {
+    state.cola = parseFloat(e.target.value);
+    colaDisplay.textContent = state.cola.toFixed(state.cola % 1 === 0 ? 1 : 2);
+    recalc();
+  });
+
+  for (var i = 0; i < yearButtons.length; i++) {
+    yearButtons[i].addEventListener('click', function(e) {
+      for (var j = 0; j < yearButtons.length; j++) {
+        yearButtons[j].classList.remove('active');
+      }
+      e.target.classList.add('active');
+      state.years = parseInt(e.target.getAttribute('data-years'), 10);
+      recalc();
+    });
+  }
+
+  // Initial calculation
+  recalc();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45 Years of Broken Promises: The COLA Timeline | SEANC</title>
+<meta name="description" content="A 45-year visual history of cost-of-living adjustments for North Carolina state retirees. The pattern speaks for itself.">
+<meta property="og:title" content="45 Years of Broken Promises | SEANC">
+<meta property="og:description" content="From 1981 through 2008, NC state retirees got a real COLA almost every year. Since 2009, the system has fundamentally changed.">
+<meta property="og:image" content="https://www.seanc.org/assets/SEANC_Logo_Blue_RGB.png">
+<meta name="theme-color" content="#005EB8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --seanc-blue: #005EB8;
+  --seanc-blue-dark: #004a93;
+  --seanc-blue-deep: #003366;
+  --seanc-light-blue: #a7d5f2;
+  --seanc-pale-blue: #e6f0fa;
+  --seanc-gold: #ffc107;
+  --seanc-teal: #00a499;
+  --seanc-red: #e63946;
+  --seanc-green: #a3d55f;
+  --seanc-gray: #d9d9d9;
+  --seanc-gray-dark: #4a4a4a;
+  --seanc-charcoal: #1a1a1a;
+  --paper: #fafafa;
+  --paper-warm: #f5f1e8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--seanc-charcoal);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ============ HEADER ============ */
+.site-header {
+  background: var(--seanc-blue);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--seanc-gold);
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-header img { height: 50px; }
+.site-header .tagline {
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+.breadcrumb {
+  background: var(--seanc-blue-dark);
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.breadcrumb a { color: var(--seanc-light-blue); text-decoration: none; }
+.breadcrumb a:hover { color: var(--seanc-gold); text-decoration: underline; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ============ HERO ============ */
+.hero {
+  background: linear-gradient(135deg, var(--seanc-blue-deep) 0%, var(--seanc-blue) 100%);
+  color: white;
+  padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,193,7,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(167,213,242,0.10) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container-narrow { position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero h1 .accent {
+  color: var(--seanc-gold);
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-lede {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,0.92);
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.hero-signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-light-blue);
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.hero-signature .divider {
+  flex-grow: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--seanc-gold);
+}
+
+/* ============ SETUP SECTION ============ */
+.setup-section {
+  background: var(--paper);
+  padding: 5rem 0 2rem;
+}
+.section-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--seanc-gold);
+}
+.section-heading {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1.5rem;
+}
+.section-lede {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--seanc-gray-dark);
+  max-width: 640px;
+  margin-bottom: 1.5rem;
+}
+.section-lede strong { color: var(--seanc-charcoal); font-weight: 700; }
+
+/* ============ TIMELINE CHART ============ */
+.timeline-section {
+  background: white;
+  padding: 3rem 0 5rem;
+}
+.timeline-wrap {
+  background: white;
+  border: 1px solid var(--seanc-gray);
+  border-radius: 4px;
+  padding: 2.5rem 1.5rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 94, 184, 0.04);
+}
+.timeline-title-block {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.timeline-title-block .eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.5rem;
+}
+.timeline-title-block .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.5rem;
+}
+.timeline-title-block .subtitle {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--seanc-gray-dark);
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: var(--paper);
+  border-radius: 4px;
+}
+.legend-key {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--seanc-gray-dark);
+}
+.legend-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.legend-swatch.permanent { background: linear-gradient(180deg, #005EB8 0%, #003366 100%); }
+.legend-swatch.bonus {
+  background: linear-gradient(180deg, #ffc107 0%, #c47a00 100%);
+  position: relative;
+}
+.legend-swatch.bonus::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,0.4) 3px, rgba(255,255,255,0.4) 5px);
+}
+.legend-swatch.none {
+  background: var(--paper);
+  border: 1.5px dashed var(--seanc-gray-dark);
+}
+
+.timeline-chart-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.timeline-chart {
+  display: block;
+  min-width: 900px;
+  width: 100%;
+  height: auto;
+}
+
+.chart-annotations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--seanc-gray);
+}
+@media (max-width: 700px) { .chart-annotations { grid-template-columns: 1fr; } }
+.annotation {
+  padding: 1.2rem;
+  background: var(--paper);
+  border-left: 4px solid var(--seanc-blue);
+  border-radius: 0 4px 4px 0;
+}
+.annotation.broken { border-left-color: var(--seanc-red); }
+.annotation .annotation-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.5rem;
+}
+.annotation.broken .annotation-label { color: var(--seanc-red); }
+.annotation .annotation-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.5rem;
+}
+.annotation .annotation-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--seanc-gray-dark);
+}
+.annotation .annotation-body strong { color: var(--seanc-charcoal); }
+
+/* ============ ERA COMPARISON ============ */
+.era-section {
+  background: var(--paper-warm);
+  padding: 5rem 0;
+}
+.era-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 800px) { .era-grid { grid-template-columns: 1fr; } }
+
+.era-card {
+  background: white;
+  border-radius: 4px;
+  padding: 2rem;
+  border-top: 6px solid var(--seanc-blue);
+}
+.era-card.broken { border-top-color: var(--seanc-red); }
+.era-card .era-period {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.5rem;
+}
+.era-card.broken .era-period { color: var(--seanc-red); }
+.era-card .era-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.era-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.era-stat {
+  padding: 1rem;
+  background: var(--paper);
+  border-radius: 4px;
+}
+.era-stat .value {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.era-card.broken .era-stat .value { color: var(--seanc-red); }
+.era-stat .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-gray-dark);
+  line-height: 1.3;
+}
+.era-card .era-prose {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--seanc-gray-dark);
+}
+.era-card .era-prose strong { color: var(--seanc-charcoal); font-weight: 700; }
+
+/* ============ PURCHASING POWER ============ */
+.power-section {
+  background: var(--seanc-blue-deep);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.power-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at 70% 30%, rgba(255,193,7,0.08) 0%, transparent 50%);
+}
+.power-section .container-narrow { position: relative; }
+.power-section .section-eyebrow { color: var(--seanc-gold); }
+.power-section .section-eyebrow::before { background: var(--seanc-gold); }
+.power-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: white;
+}
+.power-section h2 .accent {
+  color: var(--seanc-gold);
+  font-style: italic;
+  font-weight: 500;
+}
+.power-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+  color: rgba(255,255,255,0.92);
+}
+.power-section p strong { color: white; font-weight: 700; }
+.power-section .pull-quote {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--seanc-gold);
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--seanc-gold);
+  margin: 2rem 0;
+}
+
+.power-callout {
+  background: white;
+  color: var(--seanc-charcoal);
+  padding: 2rem;
+  border-radius: 4px;
+  margin-top: 2.5rem;
+  border-top: 6px solid var(--seanc-gold);
+}
+.power-callout .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 0.5rem;
+}
+.power-callout .scenario {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1rem;
+}
+.scenario-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+@media (max-width: 600px) { .scenario-compare { grid-template-columns: 1fr; } }
+.compare-col {
+  padding: 1rem;
+  background: var(--paper);
+  border-radius: 4px;
+}
+.compare-col.broken { background: rgba(230,57,70,0.08); }
+.compare-col.kept { background: rgba(0,164,153,0.08); }
+.compare-col .col-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 0.5rem;
+}
+.compare-col .col-value {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.compare-col.broken .col-value { color: var(--seanc-red); }
+.compare-col.kept .col-value { color: var(--seanc-teal); }
+.compare-col .col-desc {
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+}
+.power-callout .footnote {
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* ============ KEEP READING ============ */
+.next-section {
+  background: var(--paper-warm);
+  padding: 5rem 0;
+}
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.next-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--seanc-gray);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.next-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,94,184,0.10);
+}
+.next-card .card-mark {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.8rem;
+}
+.next-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+.next-card p {
+  font-size: 0.95rem;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+.next-card .card-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.next-card .card-link::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.next-card:hover .card-link::after { transform: translateX(4px); }
+.next-card.coming-soon {
+  background: var(--paper);
+  border-style: dashed;
+}
+.next-card.coming-soon .card-mark { color: var(--seanc-gray-dark); }
+.next-card.coming-soon .card-link { color: var(--seanc-gray-dark); pointer-events: none; cursor: default; }
+
+/* ============ CTA ============ */
+.cta-section {
+  background: var(--seanc-blue);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.cta-section p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  border-color: var(--seanc-gold);
+}
+.btn-primary:hover { background: white; border-color: white; }
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+.btn-secondary:hover { background: white; color: var(--seanc-blue); }
+
+/* ============ FOOTER ============ */
+.site-footer {
+  background: var(--seanc-charcoal);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 2rem;
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.site-footer h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-bottom: 1rem;
+}
+.site-footer a { color: var(--seanc-light-blue); text-decoration: none; }
+.site-footer a:hover { color: var(--seanc-gold); text-decoration: underline; }
+.site-footer ul { list-style: none; }
+.site-footer ul li { margin-bottom: 0.4rem; }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.footer-tagline {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  color: var(--seanc-gold);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sources {
+  background: var(--paper);
+  padding: 3rem 0;
+  border-top: 1px solid var(--seanc-gray);
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+}
+.sources h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+}
+.sources ul {
+  list-style: none;
+}
+.sources ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+.sources ul li::before {
+  content: '§';
+  position: absolute;
+  left: 0;
+  color: var(--seanc-gold);
+  font-weight: 700;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="https://www.seanc.org"><img src="https://retirees.seanc.org/seanc-logo-white.png" alt="State Employees Association of North Carolina"></a>
+    <span class="tagline">Your Voice. Our Mission.</span>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://www.seanc.org">SEANC</a> / <a href="https://retirees.seanc.org/">Retiree Resources</a> / <a href="why-no-cola.html">Why No COLA?</a> / 45 Years of COLAs
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container-narrow">
+    <div class="hero-eyebrow">A 45-Year Visual History</div>
+    <h1>
+      45 years of COLAs.
+      <span class="accent">One unmistakable pattern.</span>
+    </h1>
+    <p class="hero-lede">
+      From 1981 through 2008, North Carolina state retirees got a real, permanent cost-of-living adjustment almost every single year. Since 2009, the system has fundamentally changed — and the chart below tells you exactly when, exactly how, and exactly how much your pension's purchasing power has been allowed to erode.
+    </p>
+    <div class="hero-signature">
+      <span class="divider"></span>
+      <span>Data from the NC Retirement Systems Division</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SETUP ============ -->
+<section class="setup-section">
+  <div class="container-narrow">
+    <div class="section-eyebrow">The pattern is impossible to miss</div>
+    <h2 class="section-heading">A 45-year record, in one chart.</h2>
+    <p class="section-lede">
+      Below is every cost-of-living adjustment granted to North Carolina state retirees since 1981 — straight from the official records of the NC Retirement Systems Division. Permanent COLAs that compound year after year are shown in <strong>blue</strong>. One-time bonuses that disappear when the check clears are shown in <strong>gold</strong>. Years with no increase at all are shown as gaps.
+    </p>
+    <p class="section-lede">
+      The line down the middle marks <strong>2009</strong> — the year the music stopped.
+    </p>
+  </div>
+</section>
+
+<!-- ============ TIMELINE CHART ============ -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="timeline-wrap">
+      <div class="timeline-title-block">
+        <div class="eyebrow">Figure 1</div>
+        <div class="title">TSERS Retiree Increases &amp; Supplements, 1981–2026</div>
+        <div class="subtitle">By type, percentage of base pension</div>
+      </div>
+
+      <div class="chart-legend">
+        <div class="legend-key">
+          <span class="legend-swatch permanent"></span>
+          <span><strong>Permanent COLA</strong> — Compounds every year going forward</span>
+        </div>
+        <div class="legend-key">
+          <span class="legend-swatch bonus"></span>
+          <span><strong>One-time bonus</strong> — Disappears after one payment</span>
+        </div>
+        <div class="legend-key">
+          <span class="legend-swatch none"></span>
+          <span><strong>No increase</strong></span>
+        </div>
+      </div>
+
+      <div class="timeline-chart-wrap">
+        <svg class="timeline-chart" viewBox="0 0 1100 460" xmlns="http://www.w3.org/2000/svg" aria-label="Bar chart showing TSERS retiree cost-of-living adjustments from 1981 to 2026. Blue bars represent permanent COLAs, gold hatched bars represent one-time bonuses, gaps represent no increase. A clear pattern shows regular blue bars from 1981 to 2008, then a dramatic shift to mostly gaps and gold bonuses from 2009 to 2026.">
+          <defs>
+            <linearGradient id="permGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#005EB8"/>
+              <stop offset="100%" stop-color="#003366"/>
+            </linearGradient>
+            <linearGradient id="bonusGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffc107"/>
+              <stop offset="100%" stop-color="#c47a00"/>
+            </linearGradient>
+            <pattern id="bonusHatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+              <rect width="6" height="6" fill="url(#bonusGrad)"/>
+              <line x1="0" y1="0" x2="0" y2="6" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+            </pattern>
+          </defs>
+
+          <!-- Y-axis grid lines -->
+          <g stroke="#d9d9d9" stroke-width="0.5">
+            <line x1="60" y1="80" x2="1080" y2="80"/>
+            <line x1="60" y1="140" x2="1080" y2="140"/>
+            <line x1="60" y1="200" x2="1080" y2="200"/>
+            <line x1="60" y1="260" x2="1080" y2="260"/>
+            <line x1="60" y1="320" x2="1080" y2="320"/>
+          </g>
+
+          <!-- Y-axis labels -->
+          <g font-family="'Roboto Mono', monospace" font-size="10" fill="#4a4a4a" text-anchor="end">
+            <text x="55" y="84">8%</text>
+            <text x="55" y="144">6%</text>
+            <text x="55" y="204">4%</text>
+            <text x="55" y="264">2%</text>
+            <text x="55" y="324">0%</text>
+          </g>
+
+          <!-- Baseline -->
+          <line x1="60" y1="320" x2="1080" y2="320" stroke="#1a1a1a" stroke-width="1.5"/>
+
+          <!-- 2009 dividing line -->
+          <line x1="685" y1="60" x2="685" y2="335" stroke="#e63946" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+          <text x="685" y="55" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#e63946" letter-spacing="1.5">THE BREAK · 2009</text>
+
+          <!-- Era labels above chart -->
+          <text x="365" y="76" text-anchor="middle" font-family="'Roboto Slab', serif" font-size="13" font-weight="700" fill="#005EB8" font-style="italic">The promise kept (1981–2008)</text>
+          <text x="885" y="76" text-anchor="middle" font-family="'Roboto Slab', serif" font-size="13" font-weight="700" fill="#e63946" font-style="italic">The promise broken (2009–2026)</text>
+
+          <!-- Bars: scale is 30px per percent, baseline at y=320 -->
+          <!-- Each bar is 18px wide, gap 4px, so 22px per year. Starting at x=72 for 1981 -->
+          <!-- x = 72 + (year - 1981) * 22 -->
+
+          <!-- 1981: 3% permanent (graduated) -->
+          <rect x="72" y="230" width="18" height="90" fill="url(#permGrad)"/>
+          <!-- 1982: 2% -->
+          <rect x="94" y="260" width="18" height="60" fill="url(#permGrad)"/>
+          <!-- 1983: 4% -->
+          <rect x="116" y="200" width="18" height="120" fill="url(#permGrad)"/>
+          <!-- 1984: 8% -->
+          <rect x="138" y="80" width="18" height="240" fill="url(#permGrad)"/>
+          <!-- 1985: 4.6% -->
+          <rect x="160" y="182" width="18" height="138" fill="url(#permGrad)"/>
+          <!-- 1986: 3.8% -->
+          <rect x="182" y="206" width="18" height="114" fill="url(#permGrad)"/>
+          <!-- 1987: 4.0% -->
+          <rect x="204" y="200" width="18" height="120" fill="url(#permGrad)"/>
+          <!-- 1988: 4.8% -->
+          <rect x="226" y="176" width="18" height="144" fill="url(#permGrad)"/>
+          <!-- 1989: 5.4% -->
+          <rect x="248" y="158" width="18" height="162" fill="url(#permGrad)"/>
+          <!-- 1990: 6.7% -->
+          <rect x="270" y="119" width="18" height="201" fill="url(#permGrad)"/>
+          <!-- 1991: No Increase -->
+          <rect x="292" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 1992: 5.2% -->
+          <rect x="314" y="164" width="18" height="156" fill="url(#permGrad)"/>
+          <!-- 1993: 2.2% -->
+          <rect x="336" y="254" width="18" height="66" fill="url(#permGrad)"/>
+          <!-- 1994: 4.7% -->
+          <rect x="358" y="179" width="18" height="141" fill="url(#permGrad)"/>
+          <!-- 1995: 3.2% -->
+          <rect x="380" y="224" width="18" height="96" fill="url(#permGrad)"/>
+          <!-- 1996: 4.4% -->
+          <rect x="402" y="188" width="18" height="132" fill="url(#permGrad)"/>
+          <!-- 1997: 6.2% -->
+          <rect x="424" y="134" width="18" height="186" fill="url(#permGrad)"/>
+          <!-- 1998: 2.5% -->
+          <rect x="446" y="245" width="18" height="75" fill="url(#permGrad)"/>
+          <!-- 1999: 2.3% -->
+          <rect x="468" y="251" width="18" height="69" fill="url(#permGrad)"/>
+          <!-- 2000: 4.2% -->
+          <rect x="490" y="194" width="18" height="126" fill="url(#permGrad)"/>
+          <!-- 2001: 2% -->
+          <rect x="512" y="260" width="18" height="60" fill="url(#permGrad)"/>
+          <!-- 2002: 2% -->
+          <rect x="534" y="260" width="18" height="60" fill="url(#permGrad)"/>
+          <!-- 2003: 1.28% -->
+          <rect x="556" y="282" width="18" height="38" fill="url(#permGrad)"/>
+          <!-- 2004: 1.7% -->
+          <rect x="578" y="269" width="18" height="51" fill="url(#permGrad)"/>
+          <!-- 2005: 2% -->
+          <rect x="600" y="260" width="18" height="60" fill="url(#permGrad)"/>
+          <!-- 2006: 3% -->
+          <rect x="622" y="230" width="18" height="90" fill="url(#permGrad)"/>
+          <!-- 2007: 2.2% -->
+          <rect x="644" y="254" width="18" height="66" fill="url(#permGrad)"/>
+          <!-- 2008: 2.2% -->
+          <rect x="666" y="254" width="18" height="66" fill="url(#permGrad)"/>
+
+          <!-- ============== POST-2008 ERA ============== -->
+          <!-- 2009: No Increase -->
+          <rect x="688" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2010: No Increase -->
+          <rect x="710" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2011: No Increase -->
+          <rect x="732" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2012: 1% permanent -->
+          <rect x="754" y="290" width="18" height="30" fill="url(#permGrad)"/>
+          <!-- 2013: No Increase -->
+          <rect x="776" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2014: 1% permanent -->
+          <rect x="798" y="290" width="18" height="30" fill="url(#permGrad)"/>
+          <!-- 2015: No Increase -->
+          <rect x="820" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2016: 1.6% one-time -->
+          <rect x="842" y="272" width="18" height="48" fill="url(#bonusHatch)"/>
+          <!-- 2017: 1% permanent (partial) -->
+          <rect x="864" y="290" width="18" height="30" fill="url(#permGrad)"/>
+          <!-- 2018: 1% one-time -->
+          <rect x="886" y="290" width="18" height="30" fill="url(#bonusHatch)"/>
+          <!-- 2019: No Increase -->
+          <rect x="908" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2020: No Increase -->
+          <rect x="930" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2021: 2% one-time -->
+          <rect x="952" y="260" width="18" height="60" fill="url(#bonusHatch)"/>
+          <!-- 2022: 4% one-time -->
+          <rect x="974" y="200" width="18" height="120" fill="url(#bonusHatch)"/>
+          <!-- 2023: 4% one-time -->
+          <rect x="996" y="200" width="18" height="120" fill="url(#bonusHatch)"/>
+          <!-- 2024: No Increase -->
+          <rect x="1018" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2025: No Increase -->
+          <rect x="1040" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+          <!-- 2026: No Increase (projected) -->
+          <rect x="1062" y="318" width="18" height="2" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="2,2"/>
+
+          <!-- X-axis year labels (every 5 years) -->
+          <g font-family="'Roboto Mono', monospace" font-size="10" fill="#4a4a4a" text-anchor="middle">
+            <text x="81" y="345">1981</text>
+            <text x="191" y="345">1986</text>
+            <text x="301" y="345">1991</text>
+            <text x="411" y="345">1996</text>
+            <text x="521" y="345">2001</text>
+            <text x="631" y="345">2006</text>
+            <text x="741" y="345">2011</text>
+            <text x="851" y="345">2016</text>
+            <text x="961" y="345">2021</text>
+            <text x="1071" y="345">2026</text>
+          </g>
+
+          <!-- Tick marks -->
+          <g stroke="#1a1a1a" stroke-width="1">
+            <line x1="81" y1="320" x2="81" y2="325"/>
+            <line x1="191" y1="320" x2="191" y2="325"/>
+            <line x1="301" y1="320" x2="301" y2="325"/>
+            <line x1="411" y1="320" x2="411" y2="325"/>
+            <line x1="521" y1="320" x2="521" y2="325"/>
+            <line x1="631" y1="320" x2="631" y2="325"/>
+            <line x1="741" y1="320" x2="741" y2="325"/>
+            <line x1="851" y1="320" x2="851" y2="325"/>
+            <line x1="961" y1="320" x2="961" y2="325"/>
+            <line x1="1071" y1="320" x2="1071" y2="325"/>
+          </g>
+
+          <!-- Era summary boxes below -->
+          <g transform="translate(60, 370)">
+            <rect x="0" y="0" width="610" height="70" fill="#e6f0fa" rx="3"/>
+            <text x="14" y="22" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#005EB8" letter-spacing="1.5">1981–2008 · THE PROMISE KEPT</text>
+            <text x="14" y="44" font-family="'Roboto', sans-serif" font-size="13" fill="#1a1a1a">
+              <tspan font-weight="700">27 permanent COLAs in 28 years.</tspan> Avg. ~3.6%. One year without (1991).
+            </text>
+            <text x="14" y="62" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a" font-style="italic">Every blue bar compounded for the rest of every retiree's life.</text>
+          </g>
+          <g transform="translate(690, 370)">
+            <rect x="0" y="0" width="390" height="70" fill="rgba(230,57,70,0.08)" rx="3"/>
+            <text x="14" y="22" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#e63946" letter-spacing="1.5">2009–2026 · THE PROMISE BROKEN</text>
+            <text x="14" y="44" font-family="'Roboto', sans-serif" font-size="13" fill="#1a1a1a">
+              <tspan font-weight="700">3 small permanent COLAs in 18 years.</tspan>
+            </text>
+            <text x="14" y="62" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a" font-style="italic">5 one-time bonuses. 10 years with nothing.</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="chart-annotations">
+        <div class="annotation">
+          <div class="annotation-label">1981–2008</div>
+          <div class="annotation-title">The promise kept.</div>
+          <div class="annotation-body">
+            For 28 years, NC state retirees received a permanent, compounding cost-of-living adjustment in <strong>27 of those years</strong>. Through Reagan, Bush, Clinton, and the second Bush. Through recessions and recoveries. The average annual COLA was about <strong>3.6%</strong> — enough to roughly track inflation and preserve purchasing power for decades.
+          </div>
+        </div>
+        <div class="annotation broken">
+          <div class="annotation-label">2009–2026</div>
+          <div class="annotation-title">The promise broken.</div>
+          <div class="annotation-body">
+            In the 18 years since 2008, retirees have received <strong>three small permanent COLAs</strong> (1% each, in 2012, 2014, and a partial COLA in 2017), <strong>five one-time bonuses</strong>, and <strong>ten years with no increase at all</strong>. The bonuses do not compound. They raise nobody's monthly pension by a single dollar.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO ERAS ============ -->
+<section class="era-section">
+  <div class="container">
+    <div class="container-narrow" style="margin: 0 auto; padding: 0;">
+      <div class="section-eyebrow">Two eras, side by side</div>
+      <h2 class="section-heading">A 45-year promise, told in numbers.</h2>
+      <p class="section-lede">
+        The 28 years before 2009 and the 18 years since look like two different retirement systems entirely. Same statutes. Same legislature. Same retirees who paid into the same system. But the treatment of those retirees changed completely.
+      </p>
+    </div>
+
+    <div class="era-grid">
+      <div class="era-card">
+        <div class="era-period">1981 – 2008 (28 Years)</div>
+        <div class="era-title">The promise kept</div>
+        <div class="era-stats">
+          <div class="era-stat">
+            <div class="value">27</div>
+            <div class="label">Permanent COLAs granted</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">3.6%</div>
+            <div class="label">Average annual COLA</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">0</div>
+            <div class="label">One-time bonuses</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">1</div>
+            <div class="label">Year with no increase</div>
+          </div>
+        </div>
+        <p class="era-prose">
+          Every COLA in this era was permanent. Every COLA compounded on top of every previous COLA, for the rest of the retiree's life. A 4% raise in 1990 was still paying that retiree a 4% larger pension in 2008 — and it was still being multiplied by every subsequent COLA along the way. <strong>This is how cost-of-living protection is supposed to work.</strong>
+        </p>
+      </div>
+
+      <div class="era-card broken">
+        <div class="era-period">2009 – 2026 (18 Years)</div>
+        <div class="era-title">The promise broken</div>
+        <div class="era-stats">
+          <div class="era-stat">
+            <div class="value">3</div>
+            <div class="label">Permanent COLAs granted</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">1%</div>
+            <div class="label">Size of each permanent COLA</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">5</div>
+            <div class="label">One-time bonuses (don't compound)</div>
+          </div>
+          <div class="era-stat">
+            <div class="value">10</div>
+            <div class="label">Years with no increase at all</div>
+          </div>
+        </div>
+        <p class="era-prose">
+          In 18 years, the total permanent base-pension increase for a retiree from 2009 has been <strong>about 3%</strong> — total. Cumulative. Over the entire period. Inflation over that same period exceeded 50%. Every "bonus" you may remember receiving — the $1,200 check in 2022, the supplement in 2023 — added nothing to your monthly pension.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PURCHASING POWER ============ -->
+<section class="power-section">
+  <div class="container-narrow">
+    <div class="section-eyebrow">What this actually costs you</div>
+    <h2>
+      A bonus is a one-night stand.
+      <span class="accent">A COLA is a marriage.</span>
+    </h2>
+    <p>
+      That comparison is not subtle, and it is not meant to be. The mathematical difference between a one-time bonus and a permanent COLA is so large, and so consistently misunderstood, that it deserves to be stated plainly.
+    </p>
+    <p>
+      When the legislature gives you a 4% one-time bonus, you receive 4% of your annual pension as a single check. The check arrives. You spend it or save it. <strong>Your monthly pension on the first of the following month is exactly what it was before.</strong>
+    </p>
+    <p>
+      When the legislature gives you a 4% permanent COLA, your monthly pension goes up by 4% — <strong>and stays up by 4%, plus any future COLAs that compound on top of it, for the rest of your life.</strong>
+    </p>
+    <div class="pull-quote">
+      Over a 15-year retirement, a single 4% permanent COLA is worth roughly 15 times more than a single 4% one-time bonus. Over a 20-year retirement, it's worth 20 times more.
+    </div>
+
+    <div class="power-callout">
+      <div class="label">Worked example</div>
+      <div class="scenario">A retiree receiving $30,000 per year, age 65, receives a 4% raise in 2022.</div>
+      <div class="scenario-compare">
+        <div class="compare-col broken">
+          <div class="col-label">If it's a bonus</div>
+          <div class="col-value">$1,200</div>
+          <div class="col-desc">Total received: one check. Cumulative value over a 20-year retirement: <strong>$1,200.</strong></div>
+        </div>
+        <div class="compare-col kept">
+          <div class="col-label">If it's a permanent COLA</div>
+          <div class="col-value">$24,000</div>
+          <div class="col-desc">$1,200 more every year for the rest of their life. Cumulative value over a 20-year retirement: <strong>$24,000+.</strong></div>
+        </div>
+      </div>
+      <div class="footnote">Cumulative figures assume no further COLAs. With future COLAs compounding on top, the gap grows wider still.</div>
+    </div>
+
+    <p style="margin-top: 2.5rem;">
+      This is why <strong>the choice between bonuses and COLAs is not a budget question</strong> — it is a generational choice about how to treat the people who served North Carolina. Bonuses are cheap for the legislature in the long run. COLAs are not. That is the entire reason the legislature has consistently chosen bonuses since 2018.
+    </p>
+    <p>
+      It is also the entire reason your pension's purchasing power has eroded so badly. The bonuses you remember receiving were never going to make you whole.
+    </p>
+  </div>
+</section>
+
+<!-- ============ KEEP READING ============ -->
+<section class="next-section">
+  <div class="container">
+    <div class="section-eyebrow">Keep reading</div>
+    <h2 class="section-heading">More of the picture.</h2>
+    <p class="section-lede">
+      You've seen the structure. You've seen the 45-year record. Below: a deeper look at the math, what a real COLA would actually cost the state, and how to act on what you've learned.
+    </p>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="card-mark">Read Next</div>
+        <h3>The Three-Legged Stool</h3>
+        <p>The structural explanation: why employee contributions, employer contributions, and investment returns can't currently support a COLA.</p>
+        <a href="why-no-cola.html" class="card-link">Read the explainer</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">Your Numbers</div>
+        <h3>The COLA Calculator</h3>
+        <p>Plug in your pension and a hypothetical COLA percentage. See exactly what it's worth — and how it compares to a one-time bonus.</p>
+        <a href="cola-calculator.html" class="card-link">Run the numbers</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">Your Loss</div>
+        <h3>How Much Has Your Pension Lost?</h3>
+        <p>Enter the year you retired and see — year by year, in real dollars — exactly how much buying power inflation has quietly taken from your pension.</p>
+        <a href="cola-buying-power.html" class="card-link">See your loss</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Tell your legislators what 18 years of stagnation has cost you.</h2>
+    <p>The chart is the evidence. The bonuses were not enough. Make them hear it.</p>
+    <div class="cta-buttons">
+      <a href="https://action.seanc.org/" class="btn btn-primary">Contact Your Legislators</a>
+      <a href="https://retirees.seanc.org/" class="btn btn-secondary">Back to Retiree Resources</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources">
+  <div class="container-narrow">
+    <h3>Data Sources</h3>
+    <ul>
+      <li>"TSERS Retiree Increases or Supplements Since 1981" — NC Retirement Systems Division, updated December 2024 (myNCRetirement.gov)</li>
+      <li>TSERS Actuarial Valuation, December 31, 2024 — NC Retirement Systems Division</li>
+      <li>Bureau of Labor Statistics CPI-U data, January 2009 through December 2025, for inflation reference</li>
+      <li>All COLA percentages shown reflect the official record of permanent benefit adjustments and one-time supplements granted by the North Carolina General Assembly</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Contact SEANC</h4>
+        <p><strong style="color:white;">State Employees Association of North Carolina</strong></p>
+        <p>1621 Midtown Place<br>Raleigh, NC 27609</p>
+        <p style="margin-top:1rem;">Member Hotline: <a href="tel:18887326242">888-732-6242</a></p>
+        <p>Main Office: <a href="tel:18002222758">800-222-2758</a></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.seanc.org">SEANC.org Home</a></li>
+          <li><a href="https://retirees.seanc.org/">Retiree Resources</a></li>
+          <li><a href="why-no-cola.html">Why No COLA? The Real Story</a></li>
+          <li><a href="cola-calculator.html">The COLA Calculator</a></li>
+          <li><a href="cola-buying-power.html">How Much Has Your Pension Lost?</a></li>
+          <li><a href="https://action.seanc.org/">Contact Your Legislators</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-tagline">Your Voice. Our Mission. Empowering Change.</div>
+      <div>© 2026 State Employees Association of North Carolina. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

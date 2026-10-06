@@ -1,0 +1,35 @@
+[
+  {
+    "id": "district-21-jul-14",
+    "district_label": "District 21",
+    "date": "2026-07-14",
+    "start_time": "1:00 PM",
+    "end_time": "",
+    "venue": "Restaurant 39",
+    "address": "946 G West Andrews Ave., Henderson, NC 27536",
+    "meal": "none",
+    "published": true
+  },
+  {
+    "id": "districts-61-62-aug-3",
+    "district_label": "Districts 61 & 62",
+    "date": "2026-08-03",
+    "start_time": "9:00 AM",
+    "end_time": "Noon",
+    "venue": "Myrtle Grove Baptist Church — Fellowship Hall",
+    "address": "5524 Myrtle Grove Road, Wilmington, NC 28409",
+    "meal": "none",
+    "published": true
+  },
+  {
+    "id": "district-22-aug-14",
+    "district_label": "District 22",
+    "date": "2026-08-14",
+    "start_time": "10:00 AM",
+    "end_time": "2:00 PM",
+    "venue": "First Baptist Church — Fellowship Hall",
+    "address": "302 Moore Street, Fayetteville, NC 28301",
+    "meal": "lunch",
+    "published": true
+  }
+]

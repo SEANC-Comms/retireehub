@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why No COLA? The Real Story | SEANC</title>
+<meta name="description" content="A plainspoken explainer for SEANC retirees: why your pension hasn't had a real cost-of-living adjustment since 2017, what's actually happening to the system, and what SEANC is fighting for.">
+<meta property="og:title" content="Why No COLA? The Real Story | SEANC">
+<meta property="og:description" content="The three-legged stool of your pension is buckling. Here's what's really happening — and who's responsible.">
+<meta property="og:image" content="https://www.seanc.org/assets/SEANC_Logo_Blue_RGB.png">
+<meta name="theme-color" content="#005EB8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --seanc-blue: #005EB8;
+  --seanc-blue-dark: #004a93;
+  --seanc-blue-deep: #003366;
+  --seanc-light-blue: #a7d5f2;
+  --seanc-pale-blue: #e6f0fa;
+  --seanc-gold: #ffc107;
+  --seanc-teal: #00a499;
+  --seanc-red: #e63946;
+  --seanc-gray: #d9d9d9;
+  --seanc-gray-dark: #4a4a4a;
+  --seanc-charcoal: #1a1a1a;
+  --paper: #fafafa;
+  --paper-warm: #f5f1e8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--seanc-charcoal);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ============ HEADER ============ */
+.site-header {
+  background: var(--seanc-blue);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--seanc-gold);
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-header img { height: 50px; }
+.site-header .tagline {
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+.breadcrumb {
+  background: var(--seanc-blue-dark);
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  color: var(--seanc-light-blue);
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.breadcrumb a { color: var(--seanc-light-blue); text-decoration: none; }
+.breadcrumb a:hover { color: var(--seanc-gold); text-decoration: underline; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ============ HERO ============ */
+.hero {
+  background: linear-gradient(135deg, var(--seanc-blue-deep) 0%, var(--seanc-blue) 100%);
+  color: white;
+  padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,193,7,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(167,213,242,0.10) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container-narrow { position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero h1 .accent {
+  color: var(--seanc-gold);
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-lede {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,0.92);
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.hero-signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-light-blue);
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.hero-signature .divider {
+  flex-grow: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--seanc-gold);
+}
+
+/* ============ ACKNOWLEDGMENT ============ */
+.acknowledgment {
+  background: var(--paper-warm);
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--seanc-gray);
+}
+.acknowledgment-mark {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4rem;
+  color: var(--seanc-gold);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.acknowledgment h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1.5rem;
+}
+.acknowledgment p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: var(--seanc-gray-dark);
+}
+.acknowledgment p strong {
+  color: var(--seanc-charcoal);
+  font-weight: 700;
+}
+
+/* ============ STOOL SECTION ============ */
+.stool-section {
+  background: var(--paper);
+  padding: 5rem 0 4rem;
+  position: relative;
+}
+
+.section-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--seanc-gold);
+}
+
+.section-heading {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1.5rem;
+}
+
+.section-lede {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--seanc-gray-dark);
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+/* ============ STOOL DIAGRAM ============ */
+.stool-diagram-wrap {
+  background: white;
+  border: 1px solid var(--seanc-gray);
+  border-radius: 4px;
+  padding: 2.5rem 1.5rem;
+  margin: 0 auto 4rem;
+  max-width: 900px;
+  box-shadow: 0 2px 20px rgba(0, 94, 184, 0.04);
+}
+.stool-diagram-wrap .stool-title {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.5rem;
+}
+.stool-diagram-wrap .stool-subtitle {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.stool-svg { width: 100%; height: auto; display: block; }
+
+.stool-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--seanc-gray);
+}
+.legend-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.legend-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-gray-dark);
+}
+.legend-value {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+}
+.legend-status {
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+}
+.legend-status.shrinking { color: var(--seanc-red); font-weight: 500; }
+.legend-status.growing { color: var(--seanc-teal); font-weight: 500; }
+.legend-status.strained { color: #c47a00; font-weight: 500; }
+
+/* ============ LEG BREAKDOWNS ============ */
+.leg-section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--seanc-gray);
+}
+.leg-section:nth-child(odd) { background: var(--paper-warm); }
+
+.leg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .leg-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.leg-marker {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.8rem;
+}
+.leg-marker .number {
+  display: inline-block;
+  background: var(--seanc-blue);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+.leg-title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1rem;
+}
+
+.leg-status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+}
+.leg-status-badge.shrinking { background: rgba(230,57,70,0.12); color: var(--seanc-red); border: 1px solid var(--seanc-red); }
+.leg-status-badge.growing { background: rgba(255,193,7,0.18); color: #b08200; border: 1px solid var(--seanc-gold); }
+.leg-status-badge.strained { background: rgba(0,164,153,0.12); color: #007873; border: 1px solid var(--seanc-teal); }
+.leg-status-badge.heavy { background: rgba(0,94,184,0.10); color: var(--seanc-blue); border: 1px solid var(--seanc-blue); }
+
+.leg-body p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: var(--seanc-charcoal);
+}
+.leg-body p strong { font-weight: 700; color: var(--seanc-blue-deep); }
+
+/* Stat callouts inside legs */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-left: 4px solid var(--seanc-gold);
+  border-radius: 0 4px 4px 0;
+}
+.leg-section:nth-child(odd) .stat-row { background: var(--paper); }
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-value {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-value.red { color: var(--seanc-red); }
+.stat-value.teal { color: var(--seanc-teal); }
+.stat-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-gray-dark);
+  line-height: 1.3;
+}
+
+/* ============ FEE TRANSPARENCY CALLOUT (within Leg 3) ============ */
+.fee-callout {
+  margin-top: 2.5rem;
+  padding: 1.8rem 1.6rem 1.6rem;
+  background: white;
+  border-top: 4px solid var(--seanc-red);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+.leg-section:nth-child(odd) .fee-callout { background: var(--paper); }
+
+.fee-callout .fee-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-red);
+  margin-bottom: 0.6rem;
+}
+.fee-callout h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1rem;
+}
+.fee-callout p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--seanc-charcoal);
+  margin-bottom: 0.9rem;
+}
+.fee-callout p:last-child { margin-bottom: 0; }
+.fee-callout p strong { color: var(--seanc-blue-deep); font-weight: 700; }
+.fee-callout .fee-credit {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--seanc-gray);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--seanc-gray-dark);
+}
+.fee-callout .fee-credit strong { font-style: normal; color: var(--seanc-blue-deep); }
+
+/* ============ THE ANSWER SECTION ============ */
+.answer-section {
+  background: var(--seanc-blue-deep);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.answer-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle at 70% 30%, rgba(255,193,7,0.08) 0%, transparent 50%);
+}
+.answer-section .container-narrow { position: relative; }
+.answer-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-gold);
+  margin-bottom: 1rem;
+}
+.answer-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+.answer-section h2 .accent {
+  color: var(--seanc-gold);
+  font-style: italic;
+  font-weight: 500;
+}
+.answer-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+  color: rgba(255,255,255,0.92);
+}
+.answer-section p strong {
+  color: white;
+  font-weight: 700;
+}
+.answer-section .pull-quote {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--seanc-gold);
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--seanc-gold);
+  margin: 2rem 0;
+}
+
+/* ============ COST CALLOUT ============ */
+.cost-callout {
+  background: white;
+  color: var(--seanc-charcoal);
+  padding: 2rem;
+  border-radius: 4px;
+  margin-top: 2.5rem;
+  border-top: 6px solid var(--seanc-gold);
+}
+.cost-callout .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 0.5rem;
+}
+.cost-callout .big-number {
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(2.5rem, 6vw, 3.8rem);
+  font-weight: 800;
+  color: var(--seanc-blue-deep);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.cost-callout .desc {
+  font-size: 1rem;
+  color: var(--seanc-gray-dark);
+  line-height: 1.5;
+}
+.cost-callout .desc strong { color: var(--seanc-charcoal); }
+
+/* ============ PODCAST / VIDEO ============ */
+.podcast-section {
+  background: white;
+  padding: 5rem 0;
+  border-top: 1px solid var(--seanc-gray);
+}
+.podcast-frame {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.podcast-eyebrow {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.podcast-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--seanc-gold);
+}
+.podcast-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 1.2rem;
+}
+.podcast-intro {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 0.9rem;
+}
+.podcast-intro strong { color: var(--seanc-charcoal); font-weight: 700; }
+.podcast-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 2rem 0 1.4rem;
+  padding: 1rem 1.2rem;
+  background: var(--paper);
+  border-left: 4px solid var(--seanc-gold);
+  border-radius: 0 4px 4px 0;
+}
+.podcast-meta-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+}
+.podcast-meta-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--seanc-blue-deep);
+}
+.podcast-meta-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--seanc-gray);
+}
+.podcast-meta-guest {
+  font-size: 0.95rem;
+  color: var(--seanc-gray-dark);
+}
+.podcast-meta-guest strong { color: var(--seanc-charcoal); font-weight: 700; }
+
+/* Responsive 16:9 iframe wrapper */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: var(--seanc-blue-deep);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 51, 102, 0.18);
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.podcast-aside {
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  color: var(--seanc-gray-dark);
+  font-style: italic;
+  text-align: center;
+}
+.podcast-aside a { color: var(--seanc-blue); }
+
+/* ============ WHAT NEXT ============ */
+.next-section {
+  background: var(--paper-warm);
+  padding: 5rem 0;
+}
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.next-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--seanc-gray);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.next-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,94,184,0.10);
+}
+.next-card .card-mark {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 0.8rem;
+}
+.next-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--seanc-blue-deep);
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+.next-card p {
+  font-size: 0.95rem;
+  color: var(--seanc-gray-dark);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+.next-card .card-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seanc-blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.next-card .card-link::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+.next-card:hover .card-link::after { transform: translateX(4px); }
+.next-card.coming-soon {
+  background: var(--paper);
+  border-style: dashed;
+}
+.next-card.coming-soon .card-mark { color: var(--seanc-gray-dark); }
+.next-card.coming-soon .card-link { color: var(--seanc-gray-dark); pointer-events: none; cursor: default; }
+
+/* ============ CTA ============ */
+.cta-section {
+  background: var(--seanc-blue);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.cta-section p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  border-color: var(--seanc-gold);
+}
+.btn-primary:hover {
+  background: white;
+  border-color: white;
+}
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+.btn-secondary:hover {
+  background: white;
+  color: var(--seanc-blue);
+}
+
+/* ============ FOOTER ============ */
+.site-footer {
+  background: var(--seanc-charcoal);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 2rem;
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.site-footer h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-bottom: 1rem;
+}
+.site-footer a { color: var(--seanc-light-blue); text-decoration: none; }
+.site-footer a:hover { color: var(--seanc-gold); text-decoration: underline; }
+.site-footer ul { list-style: none; }
+.site-footer ul li { margin-bottom: 0.4rem; }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+.footer-tagline {
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  color: var(--seanc-gold);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ============ DATA SOURCES ============ */
+.sources {
+  background: var(--paper);
+  padding: 3rem 0;
+  border-top: 1px solid var(--seanc-gray);
+  font-size: 0.85rem;
+  color: var(--seanc-gray-dark);
+}
+.sources h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--seanc-blue);
+  margin-bottom: 1rem;
+}
+.sources ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+.sources ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.5;
+}
+.sources ul li::before {
+  content: '§';
+  position: absolute;
+  left: 0;
+  color: var(--seanc-gold);
+  font-weight: 700;
+}
+
+/* ============ SKIP LINK ============ */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--seanc-gold);
+  color: var(--seanc-blue-deep);
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="https://www.seanc.org"><img src="https://retirees.seanc.org/seanc-logo-white.png" alt="State Employees Association of North Carolina"></a>
+    <span class="tagline">Your Voice. Our Mission.</span>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="https://www.seanc.org">SEANC</a> / <a href="https://retirees.seanc.org/">Retiree Resources</a> / Why No COLA? The Real Story
+  </div>
+</div>
+
+<main id="main-content">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container-narrow">
+    <div class="hero-eyebrow">An Explainer for SEANC Retirees</div>
+    <h1>
+      Why no COLA?
+      <span class="accent">The real story.</span>
+    </h1>
+    <p class="hero-lede">
+      You haven't had a permanent, compounding cost-of-living adjustment to your pension since 2017. You have every right to be angry. Here's what's actually happening to the system that promised to protect you — and what SEANC is fighting to change.
+    </p>
+    <div class="hero-signature">
+      <span class="divider"></span>
+      <span>From the State Employees Association of North Carolina</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACKNOWLEDGMENT ============ -->
+<section class="acknowledgment">
+  <div class="container-narrow">
+    <div class="acknowledgment-mark">"</div>
+    <h2>We hear you. And you're right to be frustrated.</h2>
+    <p>
+      Nine years without a real COLA is not a small thing. It is a steady erosion of the pension you were promised — and that you earned with decades of service to North Carolina.
+    </p>
+    <p>
+      The one-time bonuses you've received since 2018 are not COLAs. They don't compound. They don't carry forward. The moment the check clears, your monthly pension goes right back to what it was before.
+    </p>
+    <p>
+      You deserve honest answers about <strong>why this keeps happening</strong> — and a real plan to fix it. That's what this page is for.
+    </p>
+  </div>
+</section>
+
+<!-- ============ THE STOOL ============ -->
+<section class="stool-section">
+  <div class="container-narrow">
+    <div class="section-eyebrow">The structural problem</div>
+    <h2 class="section-heading">Your pension rests on three legs. Two of them are buckling.</h2>
+    <p class="section-lede">
+      The North Carolina pension system was designed as a "three-legged stool." Employees contribute. The employer contributes. Investments make up the rest. When all three legs are strong, the system can afford to give retirees regular cost-of-living adjustments. Right now, the system can't even afford to keep up — let alone get ahead.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="stool-diagram-wrap">
+      <div class="stool-title">The Pension Stool — 2026</div>
+      <div class="stool-subtitle">A system designed for balance, now out of balance.</div>
+
+      <svg class="stool-svg" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" aria-label="Diagram of a three-legged stool with a heavy seat labeled 'Retirees' and three legs: a shrinking 'Employees' leg, a strained 'Employer' leg, and an unstable 'Investments' leg.">
+        <defs>
+          <linearGradient id="seatGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#005EB8"/>
+            <stop offset="100%" stop-color="#003366"/>
+          </linearGradient>
+          <linearGradient id="legShrinking" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e63946"/>
+            <stop offset="100%" stop-color="#a82935"/>
+          </linearGradient>
+          <linearGradient id="legStrained" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffc107"/>
+            <stop offset="100%" stop-color="#c47a00"/>
+          </linearGradient>
+          <linearGradient id="legUnstable" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00a499"/>
+            <stop offset="100%" stop-color="#007873"/>
+          </linearGradient>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="0" dy="4" result="offsetblur"/>
+            <feComponentTransfer><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+            <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Seat: Retirees (heavy, wide, slight sag) -->
+        <g filter="url(#shadow)">
+          <ellipse cx="450" cy="165" rx="260" ry="26" fill="url(#seatGrad)"/>
+          <ellipse cx="450" cy="158" rx="260" ry="20" fill="#0070d9"/>
+          <ellipse cx="450" cy="158" rx="260" ry="20" fill="none" stroke="#003366" stroke-width="1.5"/>
+        </g>
+        <text x="450" y="100" text-anchor="middle" font-family="'Roboto Slab', serif" font-size="24" font-weight="800" fill="#003366">RETIREES</text>
+        <text x="450" y="121" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="11" font-weight="700" fill="#005EB8" letter-spacing="2">GROWING IN NUMBER</text>
+
+        <!-- LEG 1: Employees (shrinking - narrow) -->
+        <g filter="url(#shadow)">
+          <polygon points="240,180 260,180 230,410 200,410" fill="url(#legShrinking)"/>
+          <line x1="240" y1="180" x2="200" y2="410" stroke="#a82935" stroke-width="1" opacity="0.5"/>
+        </g>
+        <!-- Crack indicator -->
+        <path d="M 225 260 Q 220 270, 225 280 Q 218 295, 223 310" stroke="#fafafa" stroke-width="1.5" fill="none" stroke-dasharray="3,3" opacity="0.7"/>
+
+        <!-- Label for Leg 1 (left side, well within viewBox) -->
+        <line x1="155" y1="290" x2="210" y2="290" stroke="#a82935" stroke-width="1.5"/>
+        <text x="145" y="280" text-anchor="end" font-family="'Roboto Slab', serif" font-size="16" font-weight="700" fill="#003366">EMPLOYEES</text>
+        <text x="145" y="297" text-anchor="end" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#e63946" letter-spacing="1.5">SHRINKING</text>
+        <text x="145" y="313" text-anchor="end" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a">Real wages down.</text>
+        <text x="145" y="327" text-anchor="end" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a">Headcount flat.</text>
+
+        <!-- LEG 2: Employer (strained - thicker with stress lines) -->
+        <g filter="url(#shadow)">
+          <polygon points="435,180 465,180 475,410 425,410" fill="url(#legStrained)"/>
+        </g>
+        <!-- Stress lines -->
+        <line x1="445" y1="225" x2="455" y2="225" stroke="#c47a00" stroke-width="1.5" opacity="0.7"/>
+        <line x1="442" y1="265" x2="458" y2="265" stroke="#c47a00" stroke-width="1.5" opacity="0.7"/>
+        <line x1="440" y1="305" x2="460" y2="305" stroke="#c47a00" stroke-width="1.5" opacity="0.7"/>
+        <line x1="438" y1="345" x2="462" y2="345" stroke="#c47a00" stroke-width="1.5" opacity="0.7"/>
+
+        <!-- Label for Leg 2 (below) -->
+        <text x="450" y="447" text-anchor="middle" font-family="'Roboto Slab', serif" font-size="16" font-weight="700" fill="#003366">EMPLOYER</text>
+        <text x="450" y="465" text-anchor="middle" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#c47a00" letter-spacing="1.5">STRAINED</text>
+
+        <!-- LEG 3: Investments (unstable - leaning right) -->
+        <g filter="url(#shadow)">
+          <polygon points="640,180 660,180 700,410 670,410" fill="url(#legUnstable)"/>
+        </g>
+        <!-- Wobble indicator -->
+        <path d="M 680 260 Q 685 270, 680 280 Q 687 295, 682 310" stroke="#fafafa" stroke-width="1.5" fill="none" stroke-dasharray="3,3" opacity="0.7"/>
+
+        <!-- Label for Leg 3 (right side, within viewBox) -->
+        <line x1="745" y1="290" x2="690" y2="290" stroke="#007873" stroke-width="1.5"/>
+        <text x="755" y="280" font-family="'Roboto Slab', serif" font-size="16" font-weight="700" fill="#003366">INVESTMENTS</text>
+        <text x="755" y="297" font-family="'Roboto Mono', monospace" font-size="10" font-weight="700" fill="#007873" letter-spacing="1.5">UNSTABLE</text>
+        <text x="755" y="313" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a">Losses in 2022, 2024.</text>
+        <text x="755" y="327" font-family="'Roboto', sans-serif" font-size="11" fill="#4a4a4a">No COLA gains.</text>
+
+        <!-- Ground line -->
+        <line x1="100" y1="412" x2="800" y2="412" stroke="#4a4a4a" stroke-width="1" opacity="0.3"/>
+      </svg>
+
+      <div class="stool-legend">
+        <div class="legend-item">
+          <span class="legend-label">Employee Contribution</span>
+          <span class="legend-value">6%</span>
+          <span class="legend-status shrinking">Real wages declining</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-label">Employer Contribution</span>
+          <span class="legend-value">16.79%</span>
+          <span class="legend-status strained">Nearly doubled since 2016 — retirement only</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-label">Investment Target</span>
+          <span class="legend-value">6.50%</span>
+          <span class="legend-status">Down from 7.25% a decade ago</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-label">Retiree Count</span>
+          <span class="legend-value">Rising</span>
+          <span class="legend-status growing">More benefits to pay each year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEG 1: EMPLOYEES ============ -->
+<section class="leg-section">
+  <div class="container">
+    <div class="leg-grid">
+      <div>
+        <div class="leg-marker"><span class="number">01</span>LEG ONE</div>
+        <h3 class="leg-title">Employees</h3>
+        <span class="leg-status-badge shrinking">Shrinking</span>
+      </div>
+      <div class="leg-body">
+        <p>
+          Active state employees contribute <strong>6% of every paycheck</strong> to the pension system. That percentage hasn't changed in decades. What has changed is how much that 6% actually adds up to.
+        </p>
+        <p>
+          North Carolina has roughly the same number of state employees today as it did in 2009 — even as the state's population has grown by more than two million people. And the wages those employees earn have not kept pace with inflation. In real, purchasing-power terms, the average state employee earns <strong>less today than they did fifteen years ago</strong>.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">6%</div>
+            <div class="stat-label">Employee contribution rate (unchanged)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value red">↓</div>
+            <div class="stat-label">Real wages lower than 2009</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">~Flat</div>
+            <div class="stat-label">State workforce since 2009</div>
+          </div>
+        </div>
+
+        <p>
+          The result: <strong>fewer dollars flow into the system from active employees than its designers ever expected.</strong> The legislature could fix this with real pay raises and by filling vacant positions — both of which SEANC has been demanding for years. They have chosen not to.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEG 2: EMPLOYER ============ -->
+<section class="leg-section">
+  <div class="container">
+    <div class="leg-grid">
+      <div>
+        <div class="leg-marker"><span class="number">02</span>LEG TWO</div>
+        <h3 class="leg-title">Employer</h3>
+        <span class="leg-status-badge strained">Strained</span>
+      </div>
+      <div class="leg-body">
+        <p>
+          The legislature's contribution to the pension is the leg that has been propping up the entire system. Not out of generosity — but because the math leaves no other choice.
+        </p>
+        <p>
+          In FY 2016, the legislature's retirement-only contribution to TSERS was <strong>9.15%</strong> of payroll. By FY 2024 it had climbed to <strong>17.64%</strong>. The Board of Trustees has recommended <strong>17.49%</strong> for FY 2027. That is nearly a doubling of the employer rate in roughly a decade — and it's all going to keep the existing system solvent, not to give retirees a raise.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">9.15%</div>
+            <div class="stat-label">Employer retirement rate, FY 2016</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">16.79%</div>
+            <div class="stat-label">Current rate (FY 2025)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">17.49%</div>
+            <div class="stat-label">Recommended for FY 2027</div>
+          </div>
+        </div>
+
+        <p>
+          Here is something most retirees have never been told: <strong>those one-time bonuses you received in 2017, 2019, 2022, 2023, and 2024 were paid for by raising the employer contribution rate.</strong> The 4% bonus in 2023 added 1.24% to the employer rate. The 4% bonus in 2024 added another 1.20%. They aren't "free" — they come from the same pot of money that could have funded a real COLA.
+        </p>
+        <p>
+          The reason the employer rate keeps climbing is partly that the legislature has failed to pay active employees enough or hire enough of them — and partly because they keep using rate increases to fund non-compounding bonuses instead of permanent COLAs. <strong>Fix the pay and staffing problems, stop paying for one-time bonuses out of the employer rate, and there is room to discuss real retiree relief.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEG 3: INVESTMENTS ============ -->
+<section class="leg-section">
+  <div class="container">
+    <div class="leg-grid">
+      <div>
+        <div class="leg-marker"><span class="number">03</span>LEG THREE</div>
+        <h3 class="leg-title">Investments</h3>
+        <span class="leg-status-badge growing">Unreliable</span>
+      </div>
+      <div class="leg-body">
+        <p>
+          Here is the leg that should be paying for your COLA.
+        </p>
+        <p>
+          By design, the pension system is supposed to fund cost-of-living adjustments through <strong>investment gains</strong> — when the system earns more than its target return, the surplus can be used to give retirees a raise. That's how COLAs were paid for in 1981, 1985, 1990, 1996, 2000, and most years in between.
+        </p>
+        <p>
+          But the system's assumed rate of return has been ratcheted down from <strong>7.25% to 6.50%</strong> as markets have grown harder to predict. And actual returns have whipsawed: a strong 2021 followed by a <strong>−10.38% loss in 2022</strong>, then another actuarial investment loss in 2024.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-value">6.50%</div>
+            <div class="stat-label">Current target return</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value red">−10.38%</div>
+            <div class="stat-label">Calendar year 2022 return</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">17.47%</div>
+            <div class="stat-label">2025 return needed for any 2027 COLA consideration</div>
+          </div>
+        </div>
+
+        <p>
+          Translation: <strong>investment returns are being used to keep the system from falling further behind, not to give retirees raises.</strong> Until the system earns substantially more than its target return for a sustained period, no investment-funded COLA is on the table.
+        </p>
+
+        <div class="fee-callout">
+          <div class="fee-eyebrow">Compounding the problem</div>
+          <h4>The hidden Wall Street fees no one is allowed to see.</h4>
+          <p>
+            Investment returns aren't the only thing standing between you and a COLA. There's another quiet drag on the system: <strong>the fees paid to Wall Street money managers to invest your pension</strong> — and a state law that prevents the public from finding out exactly how much is being paid, or to whom.
+          </p>
+          <p>
+            Under North Carolina law, the fees paid on the pension's "alternative investments" — hedge funds, private equity, and other complex vehicles that make up roughly a fifth of the portfolio — are shielded from public disclosure as <strong>"trade secrets."</strong> The treasurer's office knows what's being paid. The public, the legislature, and even retirees do not.
+          </p>
+          <p>
+            Every dollar paid in opaque fees is a dollar that doesn't compound for the system. Over decades, that's hundreds of millions of dollars that could have gone toward funding a COLA.
+          </p>
+          <p>
+            Former State Treasurer Dale Folwell made cutting these fees a signature priority of his time in office, ultimately reducing pension investment costs by an estimated <strong>$650 million</strong> over his two terms. That work mattered — but the underlying secrecy law remains on the books, and the pressure to chase higher-fee alternative investments continues.
+          </p>
+          <div class="fee-credit">
+            <strong>SEANC has led the fight against pension fee secrecy for nearly two decades.</strong> We commissioned the 2014 forensic investigation by former SEC investigator Edward Siedle that first exposed the scale of the problem, and we have testified against secrecy expansions at the General Assembly every session since. The fight continues — because every dollar in the system that isn't quietly leaking to Wall Street is a dollar that can fund your retirement.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE ANSWER ============ -->
+<section class="answer-section">
+  <div class="container-narrow">
+    <div class="answer-eyebrow">So why no COLA?</div>
+    <h2>The math is real. <span class="accent">But so is the choice.</span></h2>
+    <p>
+      Two legs of the stool — employees and investments — can't currently carry their share of the load. The third leg, the employer, is already strained from holding up the rest.
+    </p>
+    <p>
+      That's the math. But the math didn't happen by accident. It is the cumulative result of <strong>legislative choices</strong> — choices to keep state employee pay low, to leave thousands of positions vacant, and to fund pension obligations through one-time supplements instead of recurring commitments.
+    </p>
+    <div class="pull-quote">
+      The legislature didn't stop giving retirees raises. They quietly changed how retiree raises work — from compounding COLAs that pay forever, to one-time bonuses that disappear the moment the check clears.
+    </div>
+    <p>
+      The 2% bonus you received in 2021. The 4% bonuses in 2022 and 2023. None of those carry forward. None of them raise your base pension by a single dollar. A retiree who received a $1,200 bonus in 2023 has the same monthly pension today that they had in 2017.
+    </p>
+    <p>
+      That is not a math problem. That is a <strong>policy choice</strong> — one the legislature can change.
+    </p>
+
+    <div class="cost-callout">
+      <div class="label">What a 1% COLA would cost</div>
+      <div class="big-number">$586.7M</div>
+      <div class="desc">
+        That's the official estimate from the December 2024 actuarial valuation for a 1% permanent COLA effective July 1, 2027. <strong>It's a big number.</strong> It's also a fraction of one percent of a $35 billion state budget — and unlike a one-time bonus, it would compound for the rest of every current retiree's life.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PODCAST / SAM WATTS INTERVIEW ============ -->
+<section class="podcast-section">
+  <div class="container-narrow">
+    <div class="podcast-frame">
+      <div class="podcast-eyebrow">Hear it from the source</div>
+      <h2>The head of the NC Retirement Systems agrees.</h2>
+      <p class="podcast-intro">
+        Don't take SEANC's word for any of this. We sat down with <strong>Sam Watts, Executive Director of the North Carolina Retirement Systems Division</strong> — the man who runs TSERS day-to-day — for a candid conversation about why retirees haven't seen a real COLA in nearly a decade, and what it would actually take to change that.
+      </p>
+      <p class="podcast-intro">
+        He walks through the same three-legged math you just read about — confirming what SEANC has been telling members all along, and adding details only the system's own director can provide.
+      </p>
+
+      <div class="podcast-meta">
+        <div>
+          <div class="podcast-meta-label">From</div>
+          <div class="podcast-meta-title">The SEANC View</div>
+        </div>
+        <div class="podcast-meta-divider"></div>
+        <div>
+          <div class="podcast-meta-label">Featured Guest</div>
+          <div class="podcast-meta-guest"><strong>Sam Watts</strong> — Executive Director, NC Retirement Systems Division</div>
+        </div>
+      </div>
+
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/M0X_-DuWYXg?rel=0"
+          title="The SEANC View — Sam Watts on COLAs and the NC Retirement System"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <p class="podcast-aside">Subscribe to The SEANC View wherever you get your podcasts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT NEXT ============ -->
+<section class="next-section">
+  <div class="container">
+    <div class="section-eyebrow">Keep reading</div>
+    <h2 class="section-heading">The full picture.</h2>
+    <p class="section-lede">
+      The stool is the structure. Below: the 45-year record that shows how this pattern emerged, the calculator that shows what a real COLA would mean for you, and how to act on what you've learned.
+    </p>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="card-mark">The Evidence</div>
+        <h3>45 Years of COLAs</h3>
+        <p>Every retiree raise from 1981 to 2026 in a single chart. The pattern speaks for itself — and the 2009 break is impossible to miss.</p>
+        <a href="cola-timeline.html" class="card-link">See the chart</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">Your Numbers</div>
+        <h3>The COLA Calculator</h3>
+        <p>Plug in your pension and a hypothetical COLA percentage. See exactly what it's worth — and how it compares to a one-time bonus.</p>
+        <a href="cola-calculator.html" class="card-link">Run the numbers</a>
+      </div>
+      <div class="next-card">
+        <div class="card-mark">Your Loss</div>
+        <h3>How Much Has Your Pension Lost?</h3>
+        <p>Enter the year you retired and see — year by year, in real dollars — exactly how much buying power inflation has quietly taken from your pension.</p>
+        <a href="cola-buying-power.html" class="card-link">See your loss</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Make your legislators hear this.</h2>
+    <p>The math problem is real. The policy choice is theirs. Tell them what your retirement is worth.</p>
+    <div class="cta-buttons">
+      <a href="https://action.seanc.org/" class="btn btn-primary">Contact Your Legislators</a>
+      <a href="https://retirees.seanc.org/" class="btn btn-secondary">Back to Retiree Resources</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATA SOURCES ============ -->
+<section class="sources">
+  <div class="container-narrow">
+    <h3>Data Sources</h3>
+    <ul>
+      <li>TSERS Actuarial Valuation, December 31, 2024 (NC Retirement Systems Division)</li>
+      <li>TSERS Retiree Increases or Supplements Since 1981 (myNCRetirement.gov)</li>
+      <li>TSERS Employer Contribution Rate History (NC Retirement Systems Division)</li>
+      <li>NC Office of State Human Resources, State Employee Statistics</li>
+      <li>U.S. Bureau of Labor Statistics, NC State Government Employment data (FRED, SMU37000009092000001)</li>
+      <li>TSERS Employer Contribution Rates (Retirement Rate Only), FY 2016–2027 — prepared by staff of NC Retirement Systems Division, May 2026</li>
+      <li>Session Law 2023-134, §39.26.(c), TSERS employer contribution rates effective July 1, 2024</li>
+      <li>Retirement Monitor – June 2024, NC Retirement Systems Division (retirement-only rate breakdown)</li>
+      <li>"Looting the Pension Funds: North Carolina's $87 Billion TSERS" — Edward Siedle, Benchmark Financial Services (2014), commissioned by SEANC</li>
+      <li>NC Department of State Treasurer press releases on investment cost reductions, 2017–2024</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Contact SEANC</h4>
+        <p><strong style="color:white;">State Employees Association of North Carolina</strong></p>
+        <p>1621 Midtown Place<br>Raleigh, NC 27609</p>
+        <p style="margin-top:1rem;">Member Hotline: <a href="tel:18887326242">888-732-6242</a></p>
+        <p>Main Office: <a href="tel:18002222758">800-222-2758</a></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.seanc.org">SEANC.org Home</a></li>
+          <li><a href="https://retirees.seanc.org/">Retiree Resources</a></li>
+          <li><a href="cola-timeline.html">45 Years of COLAs</a></li>
+          <li><a href="cola-calculator.html">The COLA Calculator</a></li>
+          <li><a href="cola-buying-power.html">How Much Has Your Pension Lost?</a></li>
+          <li><a href="https://action.seanc.org/">Contact Your Legislators</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-tagline">Your Voice. Our Mission. Empowering Change.</div>
+      <div>© 2026 State Employees Association of North Carolina. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

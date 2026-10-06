@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retiree Resources | SEANC</title>
+  <meta name="description" content="Stay informed and connected as a SEANC retiree. Access the weekly Scoop newsletter, quarterly Retiree Report, podcast, advocacy tools, upcoming forums, scholarships, and exclusive member benefits.">
+  <meta name="theme-color" content="#005EB8">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Retiree Resources | SEANC">
+  <meta property="og:description" content="Everything SEANC retirees need: newsletters, podcast, advocacy tools, forums, scholarships, and member benefits — all in one place.">
+  <meta property="og:image" content="https://www.seanc.org/assets/SEANC_Logo_Blue_RGB.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="seanc-logo-blue.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto+Slab:wght@600;700;800&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       STANDALONE PAGE STYLES (page chrome only)
+       Embed-specific styles use .sr- prefix below.
+       ============================================================ */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #333;
+      background: #f5f7fa;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: #005EB8; }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #005EB8;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 1000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Site header */
+    .site-header {
+      background: #005EB8;
+      padding: 16px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .site-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .site-header a.logo-link {
+      display: inline-block;
+      line-height: 0;
+    }
+    .site-header img.logo {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+    .site-header .header-tag {
+      color: #ffc107;
+      font-family: 'Roboto Slab', 'Roboto', Georgia, serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: right;
+    }
+    @media (max-width: 600px) {
+      .site-header img.logo { height: 44px; }
+      .site-header .header-tag { font-size: 12px; letter-spacing: 1.5px; }
+    }
+
+    /* Breadcrumb bar */
+    .breadcrumb-bar {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 14px 0;
+    }
+    .breadcrumb-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .breadcrumb-bar .breadcrumb {
+      font-size: 13px;
+      color: #888;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+    .breadcrumb-bar .breadcrumb a {
+      color: #888;
+      text-decoration: none;
+    }
+    .breadcrumb-bar .breadcrumb a:hover { color: #005EB8; }
+
+    /* Main content area */
+    main {
+      padding: 40px 20px 60px 20px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #003d7a;
+      color: #e6f0fa;
+      padding: 36px 20px 20px 20px;
+      margin-top: 40px;
+    }
+    .site-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 600px) {
+      .site-footer-inner { grid-template-columns: 1fr; gap: 24px; }
+    }
+    .site-footer h4 {
+      color: #ffc107;
+      font-family: 'Roboto Slab', 'Roboto', Georgia, serif;
+      font-size: 16px;
+      margin: 0 0 12px 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .site-footer p, .site-footer a {
+      color: #c7daed;
+      font-size: 14px;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+    .site-footer p { margin: 0 0 6px 0; }
+    .site-footer a:hover { color: #fff; text-decoration: underline; }
+    .site-footer .footer-bottom {
+      max-width: 1100px;
+      margin: 24px auto 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 13px;
+      color: #a7c4e2;
+      text-align: center;
+    }
+    .site-footer .tagline {
+      color: #ffc107 !important;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================================
+       EMBED-SCOPED STYLES (.sr- prefix) — identical to Craft embed
+       ============================================================ */
+.sr-wrapper { font-family: 'Roboto', Arial, sans-serif; color: #333; max-width: 1100px; margin: 0 auto; padding: 0; box-sizing: border-box; }
+.sr-wrapper * { box-sizing: border-box; }
+
+/* Section */
+.sr-section { margin: 0 0 40px 0; padding: 0; }
+.sr-section h2 { color: #005EB8; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 28px; font-weight: 700; margin: 0 0 8px 0; padding: 0; line-height: 1.2; }
+.sr-section .sr-lead { color: #555; font-size: 16px; margin: 0 0 20px 0; line-height: 1.5; }
+
+/* Hero */
+.sr-hero { background: linear-gradient(135deg, #005EB8 0%, #003d7a 100%); color: #fff; padding: 50px 32px 44px 32px; border-radius: 8px; margin-bottom: 40px; text-align: center; }
+.sr-hero-eyebrow { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: #ffc107 !important; margin: 0 0 14px 0 !important; }
+.sr-hero h1 { color: #fff !important; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 42px; font-weight: 700; margin: 0 0 16px 0 !important; line-height: 1.1; text-align: center !important; }
+.sr-hero-text { color: #e6f0fa !important; font-size: 17px; line-height: 1.55; margin: 0 auto !important; max-width: 780px; text-align: center !important; }
+@media (max-width: 600px) {
+  .sr-hero { padding: 36px 22px 32px 22px; }
+  .sr-hero h1 { font-size: 32px !important; }
+  .sr-hero-eyebrow { font-size: 12px; letter-spacing: 2px; }
+  .sr-hero-text { font-size: 15px; }
+}
+
+/* Fighting for Your Retirement */
+.sr-fight-intro { text-align: center; max-width: 820px; margin: 0 auto 32px auto; }
+.sr-fight-eyebrow { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: #ffc107; margin: 0 0 14px 0; padding-bottom: 14px; border-bottom: 3px solid #ffc107; display: inline-block; }
+.sr-fight-lead { font-size: 18px; line-height: 1.55; color: #003d7a; font-weight: 500; margin: 0; }
+
+.sr-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 32px; }
+@media (max-width: 900px) { .sr-pillars { grid-template-columns: 1fr; gap: 18px; } }
+
+.sr-pillar { background: #fff; border: 1px solid #d6e3f0; border-top: 4px solid #005EB8; border-radius: 8px; padding: 26px 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+.sr-pillar-icon { font-size: 32px; line-height: 1; margin-bottom: 14px; }
+.sr-pillar h3 { color: #005EB8; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 18px; font-weight: 700; margin: 0 0 14px 0; line-height: 1.25; }
+.sr-pillar-list { list-style: none; padding: 0; margin: 0; }
+.sr-pillar-list li { position: relative; padding: 0 0 12px 22px; font-size: 14px; line-height: 1.5; color: #444; }
+.sr-pillar-list li:last-child { padding-bottom: 0; }
+.sr-pillar-list li:before { content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #ffc107; box-shadow: 0 0 0 3px rgba(255,193,7,0.18); }
+
+.sr-fight-close { text-align: center; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 20px; font-weight: 700; color: #005EB8; margin: 0; padding: 22px 20px; background: #e6f0fa; border-radius: 8px; border-left: 5px solid #005EB8; border-right: 5px solid #005EB8; }
+@media (max-width: 600px) { .sr-fight-close { font-size: 17px; } }
+
+/* ============ Why No COLA? — featured campaign section ============ */
+.sr-cola-section { margin: 48px 0 40px 0; padding: 38px 30px; background: linear-gradient(135deg, #003366 0%, #005EB8 100%); border-radius: 10px; position: relative; overflow: hidden; }
+.sr-cola-section:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: #ffc107; }
+@media (max-width: 600px) { .sr-cola-section { padding: 28px 20px; } }
+
+.sr-cola-intro { text-align: center; max-width: 760px; margin: 0 auto 30px auto; color: #fff; }
+.sr-cola-badge { display: inline-block; background: #ffc107; color: #003366; font-family: 'Roboto Mono', 'Roboto', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; margin-bottom: 16px; }
+.sr-cola-eyebrow { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 13px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: #ffc107; margin: 0 0 12px 0; }
+.sr-cola-title { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 32px; font-weight: 800; color: #fff; line-height: 1.1; margin: 0 0 14px 0; letter-spacing: -0.01em; }
+.sr-cola-title em { color: #ffc107; font-style: italic; font-weight: 500; display: block; }
+.sr-cola-lead { font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.92); margin: 0; }
+@media (max-width: 600px) { .sr-cola-title { font-size: 26px; } .sr-cola-lead { font-size: 15px; } }
+
+/* Featured video card */
+.sr-cola-video { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 22px; display: grid; grid-template-columns: 100px 1fr auto; gap: 20px; align-items: center; }
+@media (max-width: 700px) { .sr-cola-video { grid-template-columns: 1fr; text-align: center; gap: 14px; padding: 22px; } }
+.sr-cola-video-icon { width: 100px; height: 100px; border-radius: 50%; background: #e6f0fa; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+@media (max-width: 700px) { .sr-cola-video-icon { margin: 0 auto; width: 80px; height: 80px; } }
+.sr-cola-video-icon svg { width: 38px; height: 38px; fill: #005EB8; }
+.sr-cola-video-body h3 { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 20px; font-weight: 700; color: #003366; margin: 0 0 6px 0; line-height: 1.25; }
+.sr-cola-video-body .sr-cola-video-meta { font-family: 'Roboto Mono', 'Roboto', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #005EB8; font-weight: 700; margin: 0 0 8px 0; }
+.sr-cola-video-body p { font-size: 14px; line-height: 1.5; color: #444; margin: 0; }
+.sr-cola-video-btn { display: inline-block; background: #ffc107; color: #003366 !important; padding: 14px 24px; border-radius: 4px; text-decoration: none !important; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; transition: background 0.15s ease; }
+.sr-cola-video-btn:hover, .sr-cola-video-btn:focus { background: #fff; color: #003366 !important; }
+@media (max-width: 700px) { .sr-cola-video-btn { display: block; } }
+
+/* The three tool cards */
+.sr-cola-tools { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 1100px) { .sr-cola-tools { grid-template-columns: 1fr 1fr; gap: 16px; } }
+@media (max-width: 540px) { .sr-cola-tools { grid-template-columns: 1fr; } }
+.sr-cola-tool { background: #fff; border-radius: 8px; padding: 22px 20px; display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; text-decoration: none !important; color: inherit !important; border-top: 4px solid #005EB8; }
+.sr-cola-tool:hover, .sr-cola-tool:focus { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.18); text-decoration: none !important; }
+.sr-cola-tool-num { font-family: 'Roboto Mono', 'Roboto', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #005EB8; margin: 0 0 10px 0; }
+.sr-cola-tool h4 { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 17px; font-weight: 700; color: #003366; margin: 0 0 10px 0; line-height: 1.25; }
+.sr-cola-tool p { font-size: 13px; line-height: 1.55; color: #555; margin: 0 0 14px 0; flex-grow: 1; }
+.sr-cola-tool-link { font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #005EB8 !important; display: inline-flex; align-items: center; gap: 6px; margin-top: auto; }
+.sr-cola-tool-link:after { content: "→"; transition: transform 0.15s ease; }
+.sr-cola-tool:hover .sr-cola-tool-link:after { transform: translateX(4px); }
+
+/* Tool card variants — teal on timeline, gold on calculator, red on buying-power */
+.sr-cola-tool.is-timeline { border-top-color: #00a499; }
+.sr-cola-tool.is-timeline .sr-cola-tool-num,
+.sr-cola-tool.is-timeline .sr-cola-tool-link { color: #00a499 !important; }
+.sr-cola-tool.is-calculator { border-top-color: #ffc107; }
+.sr-cola-tool.is-calculator .sr-cola-tool-num,
+.sr-cola-tool.is-calculator .sr-cola-tool-link { color: #c47a00 !important; }
+.sr-cola-tool.is-buying-power { border-top-color: #e63946; }
+.sr-cola-tool.is-buying-power .sr-cola-tool-num,
+.sr-cola-tool.is-buying-power .sr-cola-tool-link { color: #e63946 !important; }
+
+/* Cards / grid */
+.sr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 720px) { .sr-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.sr-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.sr-card h3 { color: #005EB8; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 20px; font-weight: 700; margin: 0 0 8px 0; }
+.sr-card .sr-meta { color: #777; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px 0; font-weight: 600; }
+.sr-card p { font-size: 15px; line-height: 1.5; margin: 0 0 16px 0; color: #444; }
+
+/* Buttons */
+.sr-btn { display: inline-block; background: #005EB8; color: #fff !important; padding: 12px 24px; border-radius: 4px; text-decoration: none !important; font-weight: 600; font-size: 15px; border: none; cursor: pointer; font-family: 'Roboto', Arial, sans-serif; transition: background 0.15s ease; }
+.sr-btn:hover, .sr-btn:focus { background: #003d7a; color: #fff !important; text-decoration: none !important; }
+.sr-btn-gold { background: #ffc107; color: #003d7a !important; }
+.sr-btn-gold:hover, .sr-btn-gold:focus { background: #e0a800; color: #003d7a !important; }
+
+/* Newsletter cards */
+.sr-newsletter-card { display: flex; align-items: center; gap: 20px; background: #fff; border: 1px solid #e0e0e0; border-left: 5px solid #005EB8; border-radius: 6px; padding: 20px 24px; }
+.sr-newsletter-card.sr-quarterly { border-left-color: #ffc107; }
+.sr-newsletter-icon { flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: #e6f0fa; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.sr-quarterly .sr-newsletter-icon { background: #fff8e1; }
+.sr-newsletter-body { flex: 1; }
+.sr-newsletter-body h3 { margin: 0 0 4px 0; color: #005EB8; font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 19px; }
+.sr-newsletter-body p { margin: 0 0 10px 0; color: #555; font-size: 14px; line-height: 1.4; }
+.sr-newsletter-body .sr-meta { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 4px; }
+@media (max-width: 600px) {
+  .sr-newsletter-card { flex-direction: column; text-align: center; padding: 20px; }
+}
+
+/* Podcast embed */
+.sr-podcast-wrap { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; }
+.sr-podcast-wrap iframe { display: block; width: 100%; }
+
+/* Forums */
+.sr-forum-list { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.sr-forum { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 0; overflow: hidden; display: grid; grid-template-columns: 140px 1fr; }
+@media (max-width: 600px) { .sr-forum { grid-template-columns: 1fr; } }
+.sr-forum-date { background: #005EB8; color: #fff; padding: 18px 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+.sr-forum-month { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin: 0; color: #fff !important; }
+.sr-forum-day { font-size: 36px; font-weight: 700; margin: 4px 0; line-height: 1; color: #fff !important; }
+.sr-forum-time { font-size: 13px; color: #e6f0fa !important; margin: 4px 0 0 0; }
+.sr-forum-body { padding: 18px 22px; }
+.sr-forum-districts { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #777; margin: 0 0 6px 0; }
+.sr-forum-venue { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 17px; font-weight: 700; color: #005EB8; margin: 0 0 4px 0; line-height: 1.3; }
+.sr-forum-address { font-size: 14px; color: #555; margin: 0 0 8px 0; line-height: 1.4; }
+.sr-forum-meal { display: inline-block; background: #00a499; color: #fff !important; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+.sr-forum-meal.sr-light { background: #ffc107; color: #003d7a !important; }
+.sr-forum-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.sr-btn-sm { padding: 8px 16px; font-size: 14px; }
+
+/* === RSVP toggle button & expanding panel === */
+.sr-rsvp-btn { display: inline-flex; align-items: center; gap: 6px; background: #ffc107; color: #003d7a !important; padding: 8px 16px; border-radius: 4px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; font-family: 'Roboto', Arial, sans-serif; text-decoration: none !important; transition: background 0.15s ease; }
+.sr-rsvp-btn:hover, .sr-rsvp-btn:focus { background: #e0a800; outline: none; }
+.sr-rsvp-btn:focus-visible { box-shadow: 0 0 0 3px rgba(0, 94, 184, 0.3); }
+.sr-rsvp-btn .sr-rsvp-arrow { display: inline-block; transition: transform 0.25s ease; font-size: 12px; line-height: 1; }
+.sr-rsvp-btn[aria-expanded="true"] .sr-rsvp-arrow { transform: rotate(180deg); }
+.sr-rsvp-btn[aria-expanded="true"] { background: #003d7a; color: #fff !important; }
+.sr-rsvp-btn[aria-expanded="true"]:hover, .sr-rsvp-btn[aria-expanded="true"]:focus { background: #005EB8; }
+
+/* Collapsible panel — uses max-height for smooth animation */
+.sr-rsvp-panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), margin-top 0.25s ease;
+  margin-top: 0;
+}
+.sr-rsvp-panel.is-open {
+  max-height: 1100px;
+  margin-top: 18px;
+}
+.sr-rsvp-panel-inner {
+  background: #f0f6fc;
+  border: 1px solid #cfe1f4;
+  border-left: 4px solid #ffc107;
+  border-radius: 6px;
+  padding: 22px 22px 18px;
+}
+.sr-rsvp-panel h4 {
+  font-family: 'Roboto Slab', 'Roboto', Georgia, serif;
+  color: #003d7a;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+.sr-rsvp-panel .sr-rsvp-intro {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 16px 0;
+  line-height: 1.45;
+}
+
+/* Form fields */
+.sr-rsvp-field { margin-bottom: 14px; }
+.sr-rsvp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 540px) { .sr-rsvp-row { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 540px) { .sr-rsvp-row .sr-rsvp-field { margin-bottom: 14px; } }
+
+.sr-rsvp-field label {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #003d7a;
+  margin-bottom: 4px;
+}
+.sr-rsvp-field label .sr-req { color: #e63946; }
+.sr-rsvp-field label .sr-opt { color: #888; font-weight: 400; font-size: 11px; margin-left: 4px; }
+
+.sr-rsvp-field input {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: #1a2332;
+  background: #fff;
+  border: 1px solid #c8d6e3;
+  border-radius: 4px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.sr-rsvp-field input:focus {
+  outline: none;
+  border-color: #005EB8;
+  box-shadow: 0 0 0 3px rgba(0, 94, 184, 0.12);
+}
+
+/* Honeypot */
+.sr-rsvp-trap { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+
+.sr-rsvp-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.sr-rsvp-submit {
+  background: #003d7a;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background 0.15s;
+}
+.sr-rsvp-submit:hover, .sr-rsvp-submit:focus { background: #005EB8; outline: none; }
+.sr-rsvp-submit:focus-visible { box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.6); }
+.sr-rsvp-submit:disabled { background: #aaa; cursor: not-allowed; }
+.sr-rsvp-cancel {
+  background: transparent;
+  color: #555;
+  border: 0;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  padding: 4px 8px;
+}
+.sr-rsvp-cancel:hover, .sr-rsvp-cancel:focus { color: #003d7a; outline: none; }
+
+.sr-rsvp-error {
+  display: none;
+  padding: 10px 12px;
+  background: rgba(230, 57, 70, 0.08);
+  border-left: 3px solid #e63946;
+  border-radius: 3px;
+  color: #8a1c25;
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+.sr-rsvp-error.is-shown { display: block; }
+
+/* Success state — replaces form contents */
+.sr-rsvp-success {
+  display: none;
+  text-align: center;
+  padding: 12px 8px 4px;
+}
+.sr-rsvp-success.is-shown { display: block; }
+.sr-rsvp-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  background: #00a499; color: #fff;
+  border-radius: 50%;
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 10px;
+}
+.sr-rsvp-success h4 {
+  font-family: 'Roboto Slab', 'Roboto', Georgia, serif;
+  color: #003d7a;
+  font-size: 18px;
+  margin: 0 0 6px 0;
+}
+.sr-rsvp-success p { font-size: 14px; color: #555; margin: 0 0 4px 0; }
+
+/* Advocacy / Find Your Legislator */
+.sr-advocacy { background: linear-gradient(135deg, #005EB8 0%, #003d7a 100%); border-radius: 8px; padding: 36px 32px; color: #fff; position: relative; overflow: hidden; }
+.sr-advocacy:before { content: ""; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: rgba(255,193,7,0.12); border-radius: 50%; }
+.sr-advocacy-text { position: relative; z-index: 1; max-width: 720px; }
+.sr-advocacy-eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; color: #ffc107 !important; margin: 0 0 8px 0; }
+.sr-advocacy h2 { color: #fff !important; margin: 0 0 14px 0; font-size: 28px; }
+.sr-advocacy p { color: #e6f0fa !important; font-size: 16px; line-height: 1.55; margin: 0 0 20px 0; }
+
+/* BenefitHub section */
+.sr-benefithub { background: linear-gradient(135deg, #00a499 0%, #007d75 100%); color: #fff; padding: 32px 30px; border-radius: 8px; }
+.sr-benefithub h2 { color: #fff !important; margin-top: 0; }
+.sr-benefithub p { color: #e8f7f5 !important; font-size: 15px; line-height: 1.6; margin: 0 0 14px 0; }
+.sr-benefithub .sr-bh-savings { font-family: 'Roboto Slab', 'Roboto', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffc107 !important; margin-bottom: 8px; }
+.sr-benefithub .sr-btn { background: #ffc107; color: #003d7a !important; }
+.sr-benefithub .sr-btn:hover, .sr-benefithub .sr-btn:focus { background: #e0a800; color: #003d7a !important; }
+.sr-benefithub .sr-bh-note { font-size: 13px; color: #c8eae6 !important; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.2); }
+
+/* Scholarship section */
+.sr-scholarship { background: #fff; border: 2px solid #ffc107; border-radius: 8px; padding: 30px 32px; display: flex; align-items: center; gap: 28px; position: relative; }
+.sr-scholarship-icon { flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%; background: #fff8e1; display: flex; align-items: center; justify-content: center; font-size: 40px; border: 3px solid #ffc107; }
+.sr-scholarship-body { flex: 1; }
+.sr-scholarship-eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; color: #b8860b; margin: 0 0 6px 0; }
+.sr-scholarship h2 { color: #003d7a; margin: 0 0 10px 0; font-size: 24px; }
+.sr-scholarship p { font-size: 15px; line-height: 1.55; color: #444; margin: 0 0 16px 0; }
+@media (max-width: 600px) {
+  .sr-scholarship { flex-direction: column; text-align: center; padding: 24px 20px; }
+}
+
+/* Form */
+.sr-form-wrap { background: #f7f9fc; border: 1px solid #d6e3f0; border-radius: 8px; padding: 28px 30px; }
+.sr-form-wrap p.sr-form-intro { font-size: 15px; color: #444; margin: 0 0 20px 0; line-height: 1.5; }
+.sr-form-row { margin-bottom: 16px; }
+.sr-form-row label { display: block; font-weight: 600; font-size: 14px; color: #003d7a; margin-bottom: 6px; }
+.sr-form-row label .sr-req { color: #e63946; }
+.sr-form-row input[type="text"], .sr-form-row input[type="email"], .sr-form-row input[type="tel"], .sr-form-row select, .sr-form-row textarea { width: 100%; padding: 10px 12px; border: 1px solid #c0c0c0; border-radius: 4px; font-size: 15px; font-family: inherit; background: #fff; color: #333; }
+.sr-form-row input:focus, .sr-form-row select:focus, .sr-form-row textarea:focus { outline: none; border-color: #005EB8; box-shadow: 0 0 0 3px rgba(0,94,184,0.15); }
+.sr-form-row textarea { min-height: 110px; resize: vertical; }
+.sr-form-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .sr-form-two { grid-template-columns: 1fr; } }
+.sr-form-help { font-size: 13px; color: #666; margin: 4px 0 0 0; }
+.sr-form-success { background: #e8f5e9; border: 1px solid #00a499; border-radius: 4px; padding: 16px; color: #00695c; font-weight: 600; margin-bottom: 16px; display: none; }
+.sr-form-error { background: #fdecea; border: 1px solid #e63946; border-radius: 4px; padding: 16px; color: #b71c1c; font-weight: 600; margin-bottom: 16px; display: none; }
+
+/* Honeypot */
+.sr-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Section spacing helper */
+.sr-divider { height: 1px; background: #e0e0e0; margin: 0 0 30px 0; }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <a href="https://www.seanc.org" class="logo-link" aria-label="SEANC home">
+        <img src="seanc-logo-white.png" alt="State Employees Association of North Carolina" class="logo">
+      </a>
+      <div class="header-tag" aria-hidden="true">Your Voice. Our Mission.</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <p class="breadcrumb"><a href="https://www.seanc.org">SEANC</a> &nbsp;/&nbsp; Retiree Resources</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+<div class="sr-wrapper">
+
+  <!-- HERO -->
+  <div class="sr-hero">
+    <p class="sr-hero-eyebrow">Welcome, SEANC Retirees</p>
+    <h1>Retiree Resources</h1>
+    <p class="sr-hero-text">Everything you need to stay informed, stay connected, and keep getting the most from your SEANC membership — your weekly newsletter, the latest podcast, advocacy tools, upcoming forums, and member benefits all in one place.</p>
+  </div>
+
+  <!-- ===== WHY NO COLA? — featured campaign section =====
+       TODO: When the Ardis video is produced, restore the .sr-cola-video
+       block above .sr-cola-tools and update its href.
+  -->
+  <div class="sr-cola-section" aria-labelledby="cola-heading">
+    <div class="sr-cola-intro">
+      <span class="sr-cola-badge">New · For Retirees</span>
+      <p class="sr-cola-eyebrow">An Honest Conversation</p>
+      <h2 id="cola-heading" class="sr-cola-title">
+        Why no COLA?
+        <em>The real story.</em>
+      </h2>
+      <p class="sr-cola-lead">You haven't received a real, permanent cost-of-living adjustment to your pension since 2017. You have every right to be frustrated. Here's what's actually happening to the system that promised to protect you — and what SEANC is fighting to change.</p>
+    </div>
+
+    <!-- Three deep-dive tools -->
+    <div class="sr-cola-tools">
+
+      <a href="why-no-cola" class="sr-cola-tool">
+        <p class="sr-cola-tool-num">01 · The Explainer</p>
+        <h4>The Three-Legged Stool</h4>
+        <p>The structural problem in plain language: why your pension's three sources of funding — employees, the legislature, and investments — can't currently support a COLA.</p>
+        <span class="sr-cola-tool-link">Read the explainer</span>
+      </a>
+
+      <a href="cola-timeline" class="sr-cola-tool is-timeline">
+        <p class="sr-cola-tool-num">02 · The Evidence</p>
+        <h4>45 Years of COLAs</h4>
+        <p>Every retiree raise from 1981 to 2026 in a single chart. The pattern speaks for itself — and the 2009 break is impossible to miss.</p>
+        <span class="sr-cola-tool-link">See the chart</span>
+      </a>
+
+      <a href="cola-calculator" class="sr-cola-tool is-calculator">
+        <p class="sr-cola-tool-num">03 · Your Numbers</p>
+        <h4>The COLA Calculator</h4>
+        <p>Plug in your pension and a hypothetical COLA. See exactly what it's worth over the long run — and how it compares to a one-time bonus.</p>
+        <span class="sr-cola-tool-link">Run the numbers</span>
+      </a>
+
+      <a href="cola-buying-power" class="sr-cola-tool is-buying-power">
+        <p class="sr-cola-tool-num">04 · Your Loss</p>
+        <h4>How Much Has Your Pension Lost?</h4>
+        <p>Enter the year you retired and see — year by year, in real dollars — how much purchasing power inflation has quietly taken.</p>
+        <span class="sr-cola-tool-link">See your loss</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ===== FIGHTING FOR YOUR RETIREMENT ===== -->
+  <div class="sr-section">
+    <div class="sr-fight-intro">
+      <p class="sr-fight-eyebrow">Fighting for Your Retirement</p>
+      <p class="sr-fight-lead">For decades, SEANC has been the only organization actively standing between state employees and those who would diminish your retirement — and we have a record of winning.</p>
+    </div>
+
+    <div class="sr-pillars">
+
+      <div class="sr-pillar">
+        <div class="sr-pillar-icon" aria-hidden="true">🛡️</div>
+        <h3>Protecting Your Defined Benefit Pension</h3>
+        <ul class="sr-pillar-list">
+          <li>Repeatedly stopped attempts to eliminate the defined benefit pension system and ensured it is fully funded every year by the legislature.</li>
+          <li>In 2016, defeated a bill that would have imposed a minimum retirement age on state employees.</li>
+          <li>In 2025, blocked legislation that would have allowed the State Treasurer to invest 10% of your pension fund in cryptocurrencies.</li>
+          <li>Filed bills requiring the employer's contribution to match at least what employees put in, and has been the key advocate for stable, actuarially recommended funding every year.</li>
+        </ul>
+      </div>
+
+      <div class="sr-pillar">
+        <div class="sr-pillar-icon" aria-hidden="true">⚖️</div>
+        <h3>Holding the System Accountable</h3>
+        <ul class="sr-pillar-list">
+          <li>In 2001, sued over stolen funds from the pension system — and won. The money was returned in full.</li>
+          <li>In 2014, secured the first-ever forensic audit of the retirement system, exposing hundreds of millions of dollars paid to Wall Street money managers in hidden fees.</li>
+          <li>That audit helped elect a State Treasurer in 2016 who ended placement agent fees and the excessive Wall Street payment practice entirely.</li>
+          <li>The only organization consistently demanding transparency in how your retirement funds are managed.</li>
+        </ul>
+      </div>
+
+      <div class="sr-pillar">
+        <div class="sr-pillar-icon" aria-hidden="true">✊</div>
+        <h3>Defending Retirees' Rights</h3>
+        <ul class="sr-pillar-list">
+          <li>When lawmakers tried to impose new taxes on retirees under the Bailey Case, SEANC led the fight to stop them.</li>
+          <li>In 2014, won the return to five-year pension vesting, reversing a change that had extended the requirement to ten years.</li>
+          <li>The reason retirees have a seat at the table during budget negotiations and the reason periodic retirement supplements are secured.</li>
+          <li>No other group actively advocates for state employees in a meaningful way. SEANC is your voice.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="sr-fight-close">Without SEANC, your retirement would look very different.</p>
+  </div>
+
+  <!-- ===== NEWSLETTERS ===== -->
+  <div class="sr-section">
+    <h2>Stay in the Loop</h2>
+    <p class="sr-lead">SEANC keeps you informed with two regular publications. Click below to read the latest editions.</p>
+
+    <div class="sr-grid">
+
+      <!-- Weekly Scoop (link managed in /admin) -->
+      <div class="sr-newsletter-card">
+        <div class="sr-newsletter-icon">📰</div>
+        <div class="sr-newsletter-body">
+          <p class="sr-meta">Weekly</p>
+          <h3>The SEANC Scoop</h3>
+          <p>Your weekly briefing on legislative action, member benefits, insurance updates, and association news.</p>
+          <a class="sr-btn" id="sr-scoop-link" href="https://www.seanc.org/assets/0508.pdf" target="_blank" rel="noopener">Read This Week's Scoop</a>
+        </div>
+      </div>
+
+      <!-- Quarterly Retiree Report (link managed in /admin) -->
+      <div class="sr-newsletter-card sr-quarterly">
+        <div class="sr-newsletter-icon">📬</div>
+        <div class="sr-newsletter-body">
+          <p class="sr-meta">Quarterly</p>
+          <h3>The Retiree Report</h3>
+          <p>A quarterly publication built for state retirees: insurance spotlights, retiree council updates, and forum schedules.</p>
+          <a class="sr-btn sr-btn-gold" id="sr-retiree-report-link" href="https://www.seanc.org/assets/Retiree-Newsletter-February.pdf" target="_blank" rel="noopener">Read the Latest Edition</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== PODCAST ===== -->
+  <div class="sr-section">
+    <h2>The SEANC View Podcast</h2>
+    <p class="sr-lead">Listen to recent episodes featuring legislators, members, and association leaders discussing the issues that matter to state retirees.</p>
+    <div class="sr-podcast-wrap">
+      <iframe title="The SEANC View" allowtransparency="true" height="240" width="100%" style="border: none; min-width: min(100%, 430px);height:240px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=9r774-108e97d-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=f6f6f6&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=3267a3&size=240" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  </div>
+
+  <!-- ===== ADVOCACY / FIND YOUR LEGISLATOR ===== -->
+  <div class="sr-section">
+    <div class="sr-advocacy">
+      <div class="sr-advocacy-text">
+        <p class="sr-advocacy-eyebrow">Make Your Voice Heard</p>
+        <h2>Find &amp; Contact Your Legislators</h2>
+        <p>Your voice matters most when it reaches the lawmakers who represent you. Use SEANC's advocacy tool to look up your state senator and representative and send them a message about the issues that affect retirees — pay raises, cost-of-living adjustments, and State Health Plan protections.</p>
+        <a class="sr-btn sr-btn-gold" href="https://action.seanc.org/" target="_blank" rel="noopener">Contact Your Legislators</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== UPCOMING FORUMS ===== -->
+  <div class="sr-section">
+    <h2>Upcoming Retiree Forums</h2>
+    <p class="sr-lead">Join SEANC staff and special guests for news on retirement, insurance, scholarships, and discounts. Bring a friend who is retired or close to retirement.</p>
+
+    <!-- Forums are managed in /admin — this list is populated by JS from _data/forums.json -->
+    <div class="sr-forum-list" id="sr-forum-list" aria-live="polite">
+      <!-- Loading / fallback state. JS replaces this on load. -->
+      <p class="sr-forum-loading" style="color:#5a6a7a; font-size:14px; padding:16px 0;">Loading upcoming forums…</p>
+    </div>
+
+    <!-- Shown when no upcoming forums are published -->
+    <div class="sr-forum-empty" id="sr-forum-empty" style="display:none; padding:24px 20px; background:#f5f7fa; border-left:4px solid #005EB8; border-radius:6px; margin-top:8px;">
+      <p style="font-size:15px; color:#1a2332; margin:0 0 6px 0; font-weight:700;">No forums are currently scheduled.</p>
+      <p style="font-size:14px; color:#5a6a7a; margin:0;">Check back soon — new Retiree Forum dates are announced regularly in the SEANC Scoop and Retiree Report.</p>
+    </div>
+
+  </div>
+
+  <!-- ===== BENEFITHUB ===== -->
+  <div class="sr-section">
+    <div class="sr-benefithub">
+      <h2>Save with BenefitHub</h2>
+      <p class="sr-bh-savings">Members save an average of $2,500 a year.</p>
+      <p>Travel, tickets, auto, electronics, flowers, holiday shopping — BenefitHub is your first stop for putting money back in your pocket. It's free for SEANC members.</p>
+      <p>Don't wait another second. Visit seanc.benefithub.com and start saving today. To register, click the sign-up button on the page, then click "Don't have an account? Sign up" at the bottom of the login box and fill out the form to create your account.</p>
+      <a class="sr-btn" href="https://seanc.benefithub.com" target="_blank" rel="noopener">Visit BenefitHub</a>
+      <p class="sr-bh-note"><strong>Heads up:</strong> You'll need your Member ID to register. Don't have it handy? Use the form below to request it.</p>
+    </div>
+  </div>
+
+  <!-- ===== SCHOLARSHIP ===== -->
+  <div class="sr-section">
+    <div class="sr-scholarship">
+      <div class="sr-scholarship-icon">🎓</div>
+      <div class="sr-scholarship-body">
+        <p class="sr-scholarship-eyebrow">For Retirees Only</p>
+        <h2>Retiree Council Scholarship Program</h2>
+        <p>SEANC's Retiree Council awards scholarships exclusively to the grandchildren of SEANC retirees pursuing higher education. It's one more way your membership gives back to your family.</p>
+        <a class="sr-btn" href="https://www.seanc.org/retiree-council-scholarship-program" target="_blank" rel="noopener">Learn More &amp; Apply</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== REQUEST FORM ===== -->
+  <div class="sr-section">
+    <h2>Request a Card, Member ID, or Ask a Question</h2>
+    <p class="sr-lead">Need a replacement membership card, your Member ID number, or have a question for the SEANC staff? Fill out the form below and we'll get back to you.</p>
+
+    <div class="sr-form-wrap">
+
+      <div id="sr-form-success" class="sr-form-success">
+        Thank you! Your request has been received. A member of the SEANC staff will be in touch soon.
+      </div>
+      <div id="sr-form-error" class="sr-form-error">
+        Something went wrong. Please try again, or email us directly at communications&#64;seanc.org.
+      </div>
+
+      <form id="sr-request-form" action="https://formspree.io/f/xzdozgwv" method="POST">
+
+        <input type="hidden" name="_subject" value="State Retiree Page — New Request">
+
+        <!-- Honeypot -->
+        <div class="sr-hp" aria-hidden="true">
+          <label for="sr-hp-field">Leave this field blank</label>
+          <input type="text" id="sr-hp-field" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="sr-form-row">
+          <label for="sr-request-type">What can we help you with? <span class="sr-req">*</span></label>
+          <select id="sr-request-type" name="Request Type" required>
+            <option value="">— Select one —</option>
+            <option value="Membership Card">I need a replacement membership card</option>
+            <option value="Member ID">I need my Member ID number</option>
+            <option value="General Question">I have a question</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="sr-form-two">
+          <div class="sr-form-row">
+            <label for="sr-first">First Name <span class="sr-req">*</span></label>
+            <input type="text" id="sr-first" name="First Name" required>
+          </div>
+          <div class="sr-form-row">
+            <label for="sr-last">Last Name <span class="sr-req">*</span></label>
+            <input type="text" id="sr-last" name="Last Name" required>
+          </div>
+        </div>
+
+        <div class="sr-form-two">
+          <div class="sr-form-row">
+            <label for="sr-email">Email Address <span class="sr-req">*</span></label>
+            <input type="email" id="sr-email" name="email" required>
+          </div>
+          <div class="sr-form-row">
+            <label for="sr-phone">Phone Number</label>
+            <input type="tel" id="sr-phone" name="Phone">
+          </div>
+        </div>
+
+        <div class="sr-form-two">
+          <div class="sr-form-row">
+            <label for="sr-address">Mailing Address</label>
+            <input type="text" id="sr-address" name="Mailing Address">
+            <p class="sr-form-help">Required if requesting a replacement card.</p>
+          </div>
+          <div class="sr-form-row">
+            <label for="sr-citystate">City, State, ZIP</label>
+            <input type="text" id="sr-citystate" name="City State Zip">
+          </div>
+        </div>
+
+        <div class="sr-form-row">
+          <label for="sr-message">Message or Additional Details</label>
+          <textarea id="sr-message" name="Message" placeholder="Share any details that will help us assist you."></textarea>
+        </div>
+
+        <button type="submit" class="sr-btn">Submit Request</button>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script data-cfasync="false">
+(function() {
+  var form = document.getElementById('sr-request-form');
+  var success = document.getElementById('sr-form-success');
+  var errorBox = document.getElementById('sr-form-error');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    success.style.display = 'none';
+    errorBox.style.display = 'none';
+
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action, true);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status >= 200 && xhr.status < 300) {
+        form.reset();
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        errorBox.style.display = 'block';
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
+    xhr.send(data);
+  });
+})();
+</script>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer-inner">
+      <div>
+        <h4>Contact SEANC</h4>
+        <p><strong style="color:#fff;">State Employees Association of North Carolina</strong></p>
+        <p>1621 Midtown Place<br>Raleigh, NC 27609</p>
+        <p>Member Hotline: <a href="tel:18887326242">888-732-6242</a></p>
+        <p>Main Office: <a href="tel:18002222758">800-222-2758</a></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="https://www.seanc.org">SEANC.org Home</a></p>
+        <p><a href="https://action.seanc.org/">Contact Your Legislators</a></p>
+        <p><a href="https://seanc.benefithub.com">BenefitHub</a></p>
+        <p><a href="https://www.seanc.org/retiree-council-scholarship-program">Retiree Scholarship Program</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="tagline">Your Voice. Our Mission. Empowering Change.</p>
+      <p style="margin-top:10px;">&copy; <span id="footer-year">2026</span> State Employees Association of North Carolina. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false">
+    (function() {
+      var yr = document.getElementById('footer-year');
+      if (yr) yr.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- ===== Retiree Forum inline RSVP =====
+       To add a forum: clone an existing .sr-forum block, give the toggle button
+       and its panel a matching unique id (e.g., rsvp-panel-district-30-oct-12),
+       and set the panel's data-forum-id, data-forum-subject, data-forum-label,
+       and data-forum-date attributes. No other changes needed.
+       Formspree endpoint: https://formspree.io/f/xzdlayea
+  -->
+  <script data-cfasync="false">
+  (function () {
+    var FORMSPREE_URL = 'https://formspree.io/f/xzdlayea';
+
+    // Build the form HTML for a given panel (lazy — only inserted when first opened).
+    function buildForm(panel) {
+      var subject = panel.getAttribute('data-forum-subject') || 'Retiree Forum RSVP';
+      var forumId = panel.getAttribute('data-forum-id') || '';
+      var forumLabel = panel.getAttribute('data-forum-label') || '';
+      var forumDate = panel.getAttribute('data-forum-date') || '';
+      var uid = panel.id + '-';
+
+      var html =
+        '<h4>RSVP for this forum</h4>' +
+        '<p class="sr-rsvp-intro">Tell us who&#x27;s coming so we can confirm your spot and send any event updates.</p>' +
+        '<div class="sr-rsvp-error" role="alert" aria-live="polite"></div>' +
+        '<form class="sr-rsvp-form" action="' + FORMSPREE_URL + '" method="POST" novalidate>' +
+          '<input type="hidden" name="_subject" value="' + subject + '">' +
+          '<input type="hidden" name="forum_id" value="' + forumId + '">' +
+          '<input type="hidden" name="forum_label" value="' + forumLabel + '">' +
+          '<input type="hidden" name="forum_date" value="' + forumDate + '">' +
+          '<input type="hidden" name="_replyto" value="">' +
+          '<div class="sr-rsvp-trap" aria-hidden="true">' +
+            '<label for="' + uid + 'gotcha">Leave blank</label>' +
+            '<input type="text" id="' + uid + 'gotcha" name="_gotcha" tabindex="-1" autocomplete="off">' +
+          '</div>' +
+          '<div class="sr-rsvp-field">' +
+            '<label for="' + uid + 'name">Full Name <span class="sr-req" aria-hidden="true">*</span></label>' +
+            '<input type="text" id="' + uid + 'name" name="name" required autocomplete="name">' +
+          '</div>' +
+          '<div class="sr-rsvp-row">' +
+            '<div class="sr-rsvp-field">' +
+              '<label for="' + uid + 'email">Email <span class="sr-req" aria-hidden="true">*</span></label>' +
+              '<input type="email" id="' + uid + 'email" name="email" required autocomplete="email">' +
+            '</div>' +
+            '<div class="sr-rsvp-field">' +
+              '<label for="' + uid + 'phone">Phone <span class="sr-opt">(optional)</span></label>' +
+              '<input type="tel" id="' + uid + 'phone" name="phone" autocomplete="tel">' +
+            '</div>' +
+          '</div>' +
+          '<div class="sr-rsvp-field">' +
+            '<label for="' + uid + 'party">Number Attending (including you) <span class="sr-req" aria-hidden="true">*</span></label>' +
+            '<input type="number" id="' + uid + 'party" name="party_size" min="1" max="20" value="1" required>' +
+          '</div>' +
+          '<div class="sr-rsvp-submit-row">' +
+            '<button type="submit" class="sr-rsvp-submit">Submit RSVP</button>' +
+            '<button type="button" class="sr-rsvp-cancel" data-rsvp-cancel>Cancel</button>' +
+          '</div>' +
+        '</form>' +
+        '<div class="sr-rsvp-success" role="alert">' +
+          '<div class="sr-rsvp-success-icon" aria-hidden="true">&#x2713;</div>' +
+          '<h4>You&#x27;re on the list.</h4>' +
+          '<p>We&#x27;ve sent a confirmation to your email.</p>' +
+          '<p>Looking forward to seeing you there.</p>' +
+        '</div>';
+
+      var inner = panel.querySelector('.sr-rsvp-panel-inner');
+      inner.innerHTML = html;
+      wireForm(panel, inner);
+    }
+
+    // Wire up form interactions inside the given panel.
+    function wireForm(panel, inner) {
+      var form = inner.querySelector('.sr-rsvp-form');
+      var errorEl = inner.querySelector('.sr-rsvp-error');
+      var successEl = inner.querySelector('.sr-rsvp-success');
+      var submitBtn = inner.querySelector('.sr-rsvp-submit');
+      var emailInput = inner.querySelector('input[name="email"]');
+      var replyto = inner.querySelector('input[name="_replyto"]');
+      var cancelBtn = inner.querySelector('[data-rsvp-cancel]');
+
+      // Keep _replyto in sync with the email field for Formspree autoresponse
+      emailInput.addEventListener('input', function () {
+        replyto.value = emailInput.value;
+      });
+
+      cancelBtn.addEventListener('click', function () {
+        closePanel(panel);
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorEl.classList.remove('is-shown');
+        errorEl.textContent = '';
+
+        replyto.value = emailInput.value;
+
+        var name = form.elements['name'].value;
+        var email = form.elements['email'].value;
+        var party = form.elements['party_size'].value;
+        if (!name || !name.replace(/\s/g, '')) {
+          showError(errorEl, 'Please enter your name.');
+          return;
+        }
+        if (!email || !email.replace(/\s/g, '')) {
+          showError(errorEl, 'Please enter your email address.');
+          return;
+        }
+        if (!party || parseInt(party, 10) < 1) {
+          showError(errorEl, 'Please enter the number of people attending (at least 1).');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+
+        var data = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', form.action, true);
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== 4) return;
+          if (xhr.status === 200 || xhr.status === 201) {
+            form.style.display = 'none';
+            successEl.classList.add('is-shown');
+            // Re-measure panel so animation can grow if needed
+            refreshPanelHeight(panel);
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit RSVP';
+            showError(errorEl, 'Sorry, something went wrong. Please try again, or call SEANC at 800-222-2758 to RSVP by phone.');
+          }
+        };
+        xhr.send(data);
+      });
+    }
+
+    function showError(errorEl, msg) {
+      errorEl.textContent = msg;
+      errorEl.classList.add('is-shown');
+    }
+
+    function refreshPanelHeight(panel) {
+      if (!panel.classList.contains('is-open')) return;
+      // Briefly clear max-height to recalc then reapply
+      panel.style.maxHeight = 'none';
+      var h = panel.scrollHeight;
+      panel.style.maxHeight = h + 'px';
+    }
+
+    function openPanel(panel, toggle) {
+      // Close any other open panel first
+      var openPanels = document.querySelectorAll('.sr-rsvp-panel.is-open');
+      for (var i = 0; i < openPanels.length; i++) {
+        if (openPanels[i] !== panel) {
+          var otherId = openPanels[i].id;
+          var otherToggle = document.querySelector('[aria-controls="' + otherId + '"]');
+          if (otherToggle) closePanel(openPanels[i], otherToggle);
+        }
+      }
+
+      // Build form if first time opening
+      if (!panel.getAttribute('data-built')) {
+        buildForm(panel);
+        panel.setAttribute('data-built', 'true');
+      }
+
+      panel.classList.add('is-open');
+      panel.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+
+      // Focus first input after animation kicks off
+      setTimeout(function () {
+        var firstInput = panel.querySelector('input[name="name"]');
+        if (firstInput) firstInput.focus();
+      }, 200);
+    }
+
+    function closePanel(panel, toggle) {
+      panel.classList.remove('is-open');
+      panel.setAttribute('aria-hidden', 'true');
+      if (!toggle) {
+        toggle = document.querySelector('[aria-controls="' + panel.id + '"]');
+      }
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    // Wire up all RSVP toggle buttons. Exposed as a global so the forum
+    // renderer (which runs async after fetching _data/forums.json) can call it
+    // once forum cards are in the DOM.
+    function wireUpRSVPForms() {
+      var toggles = document.querySelectorAll('[data-rsvp-toggle]');
+      for (var i = 0; i < toggles.length; i++) {
+        (function (toggle) {
+          // Skip if already wired (idempotent — safe to call again)
+          if (toggle.getAttribute('data-rsvp-wired') === 'true') return;
+          toggle.setAttribute('data-rsvp-wired', 'true');
+          toggle.addEventListener('click', function () {
+            var panelId = toggle.getAttribute('aria-controls');
+            var panel = document.getElementById(panelId);
+            if (!panel) return;
+            var isOpen = panel.classList.contains('is-open');
+            if (isOpen) {
+              closePanel(panel, toggle);
+            } else {
+              openPanel(panel, toggle);
+            }
+          });
+        })(toggles[i]);
+      }
+    }
+    window.wireUpRSVPForms = wireUpRSVPForms;
+
+    // Deep-link support: if URL hash points at an RSVP panel, auto-open it.
+    // Used by the email "RSVP" button so retirees land directly on the right form.
+    // Hash format: #rsvp-panel-district-22-aug-14
+    function handleDeepLink() {
+      var hash = window.location.hash;
+      if (!hash || hash.indexOf('#rsvp-panel-') !== 0) return;
+      var panelId = hash.substring(1);
+      var panel = document.getElementById(panelId);
+      if (!panel) return;
+      var toggle = document.querySelector('[aria-controls="' + panelId + '"]');
+      if (!toggle) return;
+      // Wait a tick for layout / fonts to settle, then scroll + open
+      setTimeout(function () {
+        panel.closest('.sr-forum').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(function () { openPanel(panel, toggle); }, 350);
+      }, 100);
+    }
+    window.handleRSVPDeepLink = handleDeepLink;
+
+    // Try to wire immediately (handles the case where forums were pre-rendered)
+    wireUpRSVPForms();
+    handleDeepLink();
+    // Also handle hash changes within the page
+    window.addEventListener('hashchange', handleDeepLink);
+  })();
+  </script>
+
+  <!-- ===== Dynamic rendering of forums + newsletter links =====
+       Both load from the files in /_data/, which are edited through /admin
+       (Decap CMS). If the fetch fails, the hardcoded fallback link values
+       on #sr-scoop-link and #sr-retiree-report-link remain in place.
+  -->
+  <script data-cfasync="false">
+  (function () {
+    // ---- Helpers --------------------------------------------------------
+
+    var MONTH_NAMES_LONG = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var MONTH_NAMES_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var WEEKDAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var MONTH_DISPLAY_FOR_CARD = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+    var MEAL_LABELS = {
+      lunch: 'Lunch Served',
+      refreshments: 'Light Refreshments',
+      breakfast: 'Breakfast Served',
+      dinner: 'Dinner Served'
+    };
+
+    // Parse "YYYY-MM-DD" into a Date set at local noon (avoids timezone shifts
+    // where "2026-07-14" parsed as UTC midnight shows as Jul 13 in Eastern time).
+    function parseIsoDate(iso) {
+      if (!iso) return null;
+      var parts = iso.split('-');
+      if (parts.length !== 3) return null;
+      var d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 12, 0, 0);
+      return isNaN(d.getTime()) ? null : d;
+    }
+
+    // Monthly display for the date stripe
+    function formatMonthForCard(date) {
+      // Use short name if long month would wrap awkwardly; otherwise long
+      var name = MONTH_DISPLAY_FOR_CARD[date.getMonth()];
+      return name.length > 8 ? MONTH_NAMES_SHORT[date.getMonth()].toUpperCase() : name;
+    }
+
+    // "Tuesday, July 14, 2026" — used for the RSVP email body
+    function formatLongDate(date) {
+      return WEEKDAY_NAMES[date.getDay()] + ', ' + MONTH_NAMES_LONG[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+    }
+
+    // "July 14" — used in the Formspree subject line
+    function formatShortDate(date) {
+      return MONTH_NAMES_LONG[date.getMonth()] + ' ' + date.getDate();
+    }
+
+    // Combine start_time + optional end_time into display: "9:00 AM – Noon" or "1:00 PM"
+    function formatTimeRange(start, end) {
+      if (!start) return '';
+      if (!end || !end.replace(/\s/g, '')) return start;
+      return start + ' – ' + end;
+    }
+
+    // Escape text for safe injection into HTML attribute values
+    function escAttr(s) {
+      if (s == null) return '';
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#x27;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+    // Escape text for safe injection into HTML body (<p>, <span>, etc)
+    function escHtml(s) {
+      if (s == null) return '';
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    // Auto-hide forums whose date is in the past (grace: hide the day after)
+    function isUpcoming(date) {
+      if (!date) return false;
+      var cutoff = new Date();
+      cutoff.setHours(0, 0, 0, 0);
+      cutoff.setDate(cutoff.getDate() - 1); // keep the day of the forum visible all day
+      return date.getTime() >= cutoff.getTime();
+    }
+
+    // ---- Build a forum card ---------------------------------------------
+    function buildForumCard(forum) {
+      var date = parseIsoDate(forum.date);
+      if (!date) return ''; // bad data — skip silently
+
+      var panelId = 'rsvp-panel-' + forum.id;
+      var longDate = formatLongDate(date);
+      var shortDate = formatShortDate(date);
+      var subject = 'RSVP: ' + forum.district_label + ' Forum, ' + shortDate;
+      var timeDisplay = formatTimeRange(forum.start_time, forum.end_time);
+
+      var mealBadge = '';
+      if (forum.meal && forum.meal !== 'none' && MEAL_LABELS[forum.meal]) {
+        mealBadge = '<span class="sr-forum-meal">' + escHtml(MEAL_LABELS[forum.meal]) + '</span>';
+      }
+
+      return '' +
+        '<div class="sr-forum">' +
+          '<div class="sr-forum-date">' +
+            '<p class="sr-forum-month">' + escHtml(formatMonthForCard(date)) + '</p>' +
+            '<p class="sr-forum-day">' + date.getDate() + '</p>' +
+            (timeDisplay ? '<p class="sr-forum-time">' + escHtml(timeDisplay) + '</p>' : '') +
+          '</div>' +
+          '<div class="sr-forum-body">' +
+            '<p class="sr-forum-districts">' + escHtml(forum.district_label) + '</p>' +
+            '<p class="sr-forum-venue">' + escHtml(forum.venue) + '</p>' +
+            '<p class="sr-forum-address">' + escHtml(forum.address) + '</p>' +
+            '<div class="sr-forum-actions">' +
+              mealBadge +
+              '<button type="button" class="sr-rsvp-btn" data-rsvp-toggle aria-expanded="false" aria-controls="' + escAttr(panelId) + '">' +
+                'RSVP <span class="sr-rsvp-arrow" aria-hidden="true">▾</span>' +
+              '</button>' +
+            '</div>' +
+            '<div class="sr-rsvp-panel" id="' + escAttr(panelId) + '" ' +
+                 'data-forum-id="' + escAttr(forum.id) + '" ' +
+                 'data-forum-subject="' + escAttr(subject) + '" ' +
+                 'data-forum-label="' + escAttr(forum.district_label) + '" ' +
+                 'data-forum-date="' + escAttr(longDate) + '" ' +
+                 'aria-hidden="true">' +
+              '<div class="sr-rsvp-panel-inner"></div>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+    }
+
+    // ---- Render forums --------------------------------------------------
+    function renderForums(forums) {
+      var list = document.getElementById('sr-forum-list');
+      var empty = document.getElementById('sr-forum-empty');
+      if (!list) return;
+
+      // Filter: published AND upcoming AND has required fields
+      var visible = [];
+      for (var i = 0; i < forums.length; i++) {
+        var f = forums[i];
+        if (!f.published) continue;
+        if (!f.id || !f.district_label || !f.date || !f.venue || !f.address) continue;
+        var d = parseIsoDate(f.date);
+        if (!isUpcoming(d)) continue;
+        visible.push(f);
+      }
+
+      // Sort chronologically
+      visible.sort(function (a, b) {
+        return parseIsoDate(a.date).getTime() - parseIsoDate(b.date).getTime();
+      });
+
+      if (visible.length === 0) {
+        list.innerHTML = '';
+        if (empty) empty.style.display = 'block';
+        return;
+      }
+
+      var html = '';
+      for (var j = 0; j < visible.length; j++) {
+        html += buildForumCard(visible[j]);
+      }
+      list.innerHTML = html;
+      if (empty) empty.style.display = 'none';
+
+      // Hand off to the RSVP wire-up
+      if (typeof window.wireUpRSVPForms === 'function') window.wireUpRSVPForms();
+      // Re-run deep-link in case the user landed here via an email link
+      if (typeof window.handleRSVPDeepLink === 'function') window.handleRSVPDeepLink();
+    }
+
+    // ---- Render newsletter links ----------------------------------------
+    function renderNewsletters(data) {
+      if (data.scoop) {
+        var scoop = document.getElementById('sr-scoop-link');
+        if (scoop) {
+          if (data.scoop.url) scoop.setAttribute('href', data.scoop.url);
+          if (data.scoop.label) scoop.textContent = data.scoop.label;
+        }
+      }
+      if (data.retiree_report) {
+        var rr = document.getElementById('sr-retiree-report-link');
+        if (rr) {
+          if (data.retiree_report.url) rr.setAttribute('href', data.retiree_report.url);
+          if (data.retiree_report.label) rr.textContent = data.retiree_report.label;
+        }
+      }
+    }
+
+    // ---- Fetch both JSON files ------------------------------------------
+    // Cache-bust with timestamp so edits in /admin show up immediately rather
+    // than waiting for the CDN cache to expire. Browser still caches briefly
+    // but the ?v= changes often enough to be effectively live.
+    function fetchJson(url, callback) {
+      var xhr = new XMLHttpRequest();
+      // Use a timestamp bucket (per hour) — balance of freshness vs cacheability
+      var bust = Math.floor(Date.now() / (5 * 60 * 1000)); // 5-minute buckets
+      xhr.open('GET', url + '?v=' + bust, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState !== 4) return;
+        if (xhr.status >= 200 && xhr.status < 300) {
+          try {
+            callback(null, JSON.parse(xhr.responseText));
+          } catch (e) {
+            callback(e, null);
+          }
+        } else {
+          callback(new Error('HTTP ' + xhr.status), null);
+        }
+      };
+      xhr.onerror = function () { callback(new Error('Network error'), null); };
+      xhr.send();
+    }
+
+    fetchJson('/_data/forums.json', function (err, forums) {
+      if (err || !forums) {
+        // On failure, hide loading state and show empty state so the page doesn't look broken
+        var list = document.getElementById('sr-forum-list');
+        if (list) list.innerHTML = '';
+        var empty = document.getElementById('sr-forum-empty');
+        if (empty) empty.style.display = 'block';
+        return;
+      }
+      renderForums(forums);
+    });
+
+    fetchJson('/_data/newsletters.json', function (err, data) {
+      if (err || !data) return; // keep hardcoded fallback URLs
+      renderNewsletters(data);
+    });
+  })();
+  </script>
+
+  <!-- Netlify Identity widget — needed so Decap CMS login redirects
+       work. Shows nothing on the public page unless a logged-in editor
+       visits it. Loads from CDN; totally safe.
+  -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script data-cfasync="false">
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

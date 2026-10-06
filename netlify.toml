@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Make sure JSON files aren't cached long so admin edits appear quickly
+[[headers]]
+  for = "/_data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=60, must-revalidate"
