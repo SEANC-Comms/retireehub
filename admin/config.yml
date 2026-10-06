@@ -24,76 +24,78 @@ collections:
   # ========================================================================
   - name: "forums"
     label: "Retiree Forums"
-    label_singular: "Forum"
     description: "Add, edit, or delete upcoming Retiree Forums. Past forums automatically disappear from the public site 1 day after the event date, but you can delete them here to keep this list tidy."
-    file: "_data/forums.json"
-    format: "json"
     editor:
       preview: false
-    fields:
-      - label: "Forums"
+    files:
+      - label: "Forum List"
         name: "forums"
-        label_singular: "forum"
-        widget: "list"
-        summary: "{{fields.district_label}} — {{fields.date}}"
+        file: "_data/forums.json"
+        format: "json"
         fields:
-          - label: "District(s)"
-            name: "district_label"
-            widget: "string"
-            hint: "How the district appears on the card. Examples: 'District 22'  OR  'Districts 61 & 62'"
+          - label: "Forums"
+            name: "forums"
+            label_singular: "forum"
+            widget: "list"
+            summary: "{{fields.district_label}} — {{fields.date}}"
+            fields:
+              - label: "District(s)"
+                name: "district_label"
+                widget: "string"
+                hint: "How the district appears on the card. Examples: 'District 22'  OR  'Districts 61 & 62'"
 
-          - label: "Date"
-            name: "date"
-            widget: "datetime"
-            date_format: "YYYY-MM-DD"
-            time_format: false
-            picker_utc: false
-            hint: "Click to open a calendar. Pick the day of the forum."
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: false
+                hint: "Click to open a calendar. Pick the day of the forum."
 
-          - label: "Start time"
-            name: "start_time"
-            widget: "string"
-            hint: "Example: '1:00 PM' or '9:00 AM'. Just type it how you want it to appear."
+              - label: "Start time"
+                name: "start_time"
+                widget: "string"
+                hint: "Example: '1:00 PM' or '9:00 AM'. Just type it how you want it to appear."
 
-          - label: "End time (optional)"
-            name: "end_time"
-            widget: "string"
-            required: false
-            default: ""
-            hint: "Leave blank if there's no end time. Examples: '2:00 PM', 'Noon'."
+              - label: "End time (optional)"
+                name: "end_time"
+                widget: "string"
+                required: false
+                default: ""
+                hint: "Leave blank if there's no end time. Examples: '2:00 PM', 'Noon'."
 
-          - label: "Venue name"
-            name: "venue"
-            widget: "string"
-            hint: "Example: 'First Baptist Church — Fellowship Hall'"
+              - label: "Venue name"
+                name: "venue"
+                widget: "string"
+                hint: "Example: 'First Baptist Church — Fellowship Hall'"
 
-          - label: "Address"
-            name: "address"
-            widget: "string"
-            hint: "Street, city, state, zip. Example: '302 Moore Street, Fayetteville, NC 28301'"
+              - label: "Address"
+                name: "address"
+                widget: "string"
+                hint: "Street, city, state, zip. Example: '302 Moore Street, Fayetteville, NC 28301'"
 
-          - label: "Meal"
-            name: "meal"
-            widget: "select"
-            default: "none"
-            options:
-              - { label: "None (don't show a meal badge)", value: "none" }
-              - { label: "Lunch Served", value: "lunch" }
-              - { label: "Light Refreshments", value: "refreshments" }
-              - { label: "Breakfast Served", value: "breakfast" }
-              - { label: "Dinner Served", value: "dinner" }
+              - label: "Meal"
+                name: "meal"
+                widget: "select"
+                default: "none"
+                options:
+                  - { label: "None (don't show a meal badge)", value: "none" }
+                  - { label: "Lunch Served", value: "lunch" }
+                  - { label: "Light Refreshments", value: "refreshments" }
+                  - { label: "Breakfast Served", value: "breakfast" }
+                  - { label: "Dinner Served", value: "dinner" }
 
-          - label: "Internal ID"
-            name: "id"
-            widget: "string"
-            pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only — no spaces."]
-            hint: "A unique nickname for this forum. Used in RSVP emails and in the direct link you can share. Example: 'district-22-aug-14'. If you're not sure, follow the pattern: district-#-month-day."
+              - label: "Internal ID"
+                name: "id"
+                widget: "string"
+                pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only — no spaces."]
+                hint: "A unique nickname for this forum. Used in RSVP emails and in the direct link you can share. Example: 'district-22-aug-14'. If you're not sure, follow the pattern: district-#-month-day."
 
-          - label: "Published"
-            name: "published"
-            widget: "boolean"
-            default: true
-            hint: "Uncheck to hide this forum from the public page while you're still finishing the details."
+              - label: "Published"
+                name: "published"
+                widget: "boolean"
+                default: true
+                hint: "Uncheck to hide this forum from the public page while you're still finishing the details."
 
   # ========================================================================
   # NEWSLETTERS — current PDF links for Scoop and Retiree Report
