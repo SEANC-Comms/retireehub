@@ -32,6 +32,17 @@
       "end_time": "3:00 PM",
       "address": "205 Breckenridge St., Henderson, NC 27536",
       "id": "district-21-nov-13"
+    },
+    {
+      "district_label": "District 13",
+      "meal": "lunch",
+      "start_time": "11:00 AM ",
+      "published": true,
+      "date": "2026-11-18",
+      "venue": "Simpson Gillespie United Methodist Church",
+      "end_time": "1:00 PM",
+      "address": "3545 Beatties Ford Road, Charlotte, NC 28216",
+      "id": "district-13-nov-18"
     }
   ]
 }
