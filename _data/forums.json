@@ -4,7 +4,7 @@
       "district_label": "District 21",
       "meal": "none",
       "start_time": "1:00 PM",
-      "published": true,
+      "published": false,
       "date": "2026-07-14",
       "venue": "Restaurant 39",
       "end_time": "",
@@ -15,7 +15,7 @@
       "district_label": "District 7",
       "meal": "none",
       "start_time": "5:30 PM",
-      "published": true,
+      "published": false,
       "date": "2026-10-15",
       "venue": "First Baptist Church",
       "end_time": "8:00 PM",
@@ -27,11 +27,11 @@
       "meal": "none",
       "start_time": "12:00 PM",
       "published": true,
-      "date": "2026-11-13",
+      "date": "2026-11-17",
       "venue": "Perry Memorial Library",
       "end_time": "3:00 PM",
       "address": "205 Breckenridge St., Henderson, NC 27536",
-      "id": "district-21-nov-13"
+      "id": "district-21-nov-17"
     },
     {
       "district_label": "District 13",
