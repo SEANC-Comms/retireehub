@@ -15,7 +15,7 @@
       "district_label": "District 7",
       "meal": "none",
       "start_time": "5:30 PM",
-      "published": false,
+      "published": true,
       "date": "2026-10-15",
       "venue": "First Baptist Church",
       "end_time": "8:00 PM",
